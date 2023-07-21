@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Professional Development Answers
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('PD Plan')
+					+thSortable('PD Question')
+					+thSortable('Answer')
+					+thSortable('Created On')
+					+thSortable('Created By')
+			tbody
+				tr
+					td CE - Test - Test
+					td Test
+					td Answer
+					td Aug-06-2022
+					td: a(href="#0") Adam Smith

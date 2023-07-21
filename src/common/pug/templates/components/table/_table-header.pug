@@ -1,0 +1,26 @@
+//Table Header
+.content-header__container
+  .row.align-items-center.g-0.g-md-4.h-100
+    
+    //Search Collapsed in Mobile
+    .search-form-container.d-lg-block.col-lg-3.col-xl-auto#table-search(class=`col-auto ms-auto order-${desktopBreakpoint}-2`)
+      form.search-form.input-group
+        label.visually-hidden(for='input-search-1') Label
+        input.form-control.form-control-sm.form-control--search(type='text', id='input-search-1', placeholder='Narrow results by keyword')
+        button.btn.btn-sm(type='submit')
+          +iconSearch('icon--sm')
+
+    .col-md.col-lg-9.col-xl(class=`order-${desktopBreakpoint}-1`)
+      .row.g-0.g-md-4.flex-nowrap
+        .col-10.col-sm-11.col-md
+          .scroll-horizontal
+            //Table Buttons
+            .table-buttons.btn-group.btn-group--g-2
+              block tableButtons
+        
+        .col-2.col-sm-1.col-md-auto.ms-auto.d-flex.d-lg-none.justify-content-end
+          .vr.me-2
+          //Mobile Search Toggler
+          button.component.btn.btn-transparent.btn-sm.js-toggle-class(data-target="table-search")
+            +iconSearch('component__default')
+            +iconClose('component__active')

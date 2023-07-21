@@ -1,0 +1,13 @@
+//Page Content Independent Scroll
+//Takes 100% height
+.vertical-space
+  //Content Header
+  .content-header
+    //- If contentHeader exist in page file it will be rendered here. If no - empty content header with border
+    block contentHeader
+
+  //Takes all available vertical space and scrollable
+  .vertical-space__filler
+    //Unique Page Content Start
+    block pageContent
+    //Unique Page Content End

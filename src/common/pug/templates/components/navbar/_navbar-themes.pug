@@ -1,0 +1,21 @@
+//Navbar Themes
+.dropdown.h-100.dropdown--full-screen-mobile.dropdown--no-triangle.dropdown--md
+	.navbar__btn.dropdown-toggle(data-bs-toggle='dropdown')
+		+iconThumbnail2
+
+	.dropdown-menu
+		//Close - visible in phone
+		.dropdown-menu__close.btn-close.btn-close-white
+			
+		//Helper wrapper for full-screen in phone
+		.dropdown-menu__content
+			.container-fluid
+				
+				//Content
+				.row.g-2
+					.col-md-4
+						+boxLink(
+							'thentia',
+							'../../img/logo-small.svg',
+							'../dashboard.html'
+						)

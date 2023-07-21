@@ -1,0 +1,21 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Privileges
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Created On')
+					+thSortable('Created By')
+			tbody
+				tr
+					td Non-Administrator - Application Instructions
+					td May-21-2022 10:32 PM
+					td: a(href="#0") Web Service

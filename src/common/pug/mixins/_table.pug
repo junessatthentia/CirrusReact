@@ -1,0 +1,212 @@
+mixin thSortable(text)
+  //Th Sortable
+  th.table__th-sortable
+    .table__th-sortable-content
+      =text
+      .btn.btn-sm
+        +iconArrowUp
+
+mixin tableRowRecord
+  //Table Row Record
+  tr
+    td Text_L
+    td: a(href='#0') Text_L
+    td Text_L
+    td Text_L
+    td Text_L
+    td Text_L
+
+mixin tableRowAllBusinessRegViewPhoneEmail
+  //Table Row All Business RegView Phone Email
+  tr
+    td AS Solutions
+    td A8D2837
+    td New York
+    td: a(href="tel:2125651212") (212) 565-1212
+    td: a(href="mailto:asbusiness@mailinator.com") asbusiness@mailinator.com
+
+mixin tableRowAllBussinessRegViewPhoneEmail2
+  //Table Row All Bussiness Reg View Phone Email 2
+  tr
+    td AS Solutions
+    td 98S3N8C
+    td Toronto
+    td: a(href="tel:4168372938") (416) 837-2938
+    td: a(href="mailto:sumeet.singh@thentia.com") sumeet.singh@thentia.com
+
+mixin tableRowAllBusinessRegViewDate
+  //Table Row All Business Reg View Date
+  tr
+    td onlineservice.business.application
+    td DJ239D384
+    td Toronto
+    td 02/05/2022 5:56 PM
+    td: a(href="mailto:abc@email.com") abc@email.com
+
+mixin tableRowEmailTemplateRecordEmail
+  //Table Row Email Template Record Email
+  tr
+    td onlineservice.business.application
+    td: a(href="mailto:tc@thentiacloud.com") tc@thentiacloud.com
+    td {{sysmsg:acronym}} - Renewal - Approved
+    td Aug-05-2022 5:56 PM
+    td: a(href="#0") Ewan McGregor
+    td Aug-05-2022 5:56 PM
+    td: a(href="#0") Hayden Christensen
+
+mixin tableRowAuditHistory
+  //Table Row Audit History
+  tr
+    td comms_emailtemplate
+    td comms_from
+    td tc@thentiacloud.com
+    td newemail@thentiacloud.com
+    td Dec-01-2022 12:34 PM
+    td N/A
+    td Tiana Calzoni
+
+mixin tableRowTransmissionLogEmailAuditRecords
+  //Table Row Transmission Log Email Audit Records
+  tr
+    td: a(href="mailto:tc@thentiacloud.com") tc@thentiacloud.com
+    td onlineservice.business.application.…
+    td: a(href="mailto:felicia.reid@example.com") felicia.reid@example.com
+    td {{sysmsg:acronym}} - Renewal - Approved...
+    td N/A
+    td N/A
+    td N/A
+    td N/A
+    td 03/17/2029 21:49
+
+mixin tableRowComplaintsView
+  //Table Row Complaints View
+  tr
+    td Complaint - 2021 - 89
+    td: a(href="#0") Maren Lubin
+    td: span.badge.rounded-pill.text-bg-light Received
+    td Sep-02-2020
+    td: span.badge.rounded-pill.text-bg-warning Online Complaint
+
+mixin tableRowCasesView
+  //Table Row Cases View
+  tr
+    td N/A
+    td: span.badge.rounded-pill.text-bg-light Intake
+    td Malpractice
+    td Sep-02-2020
+    td: span.badge.rounded-pill.text-bg-success Submitted
+    td N/A
+
+mixin tableRowMandatoryReportsView
+  //Table Row Mandatory Reports View
+  tr
+    td Report - 2021 - 89
+    td: a(href="#0") Maren Lubin
+    td: span.badge.rounded-pill.text-bg-light Received
+    td Sep-02-2020
+    td: span.badge.rounded-pill.text-bg-warning Online Complaint
+
+mixin tableRowAllPublicNoticeView
+  //Table Row All Public Notice View
+  tr
+    td Found Guilty
+    td: span.badge.rounded-pill.text-bg-light Discipline Decision
+    td Feb-23-2022
+    td May-12-2022
+    td: span.badge.rounded-pill.text-bg-success Yes
+    td: a(href="#0") Anika Botosh
+    td: a(href="#0") HighTech Permit A-0014
+
+mixin tableRowAllCaseCategoriesView
+  //Table Row All Case Categories View
+  tr
+    td Malpractice
+    td: a(href="#0") Makenna Kenter
+    td: a(href="#0") Web service
+    td Feb-23-2022 9:59 AM
+
+mixin tableRowViewTypes
+  //Table Row View Types
+  tr
+    td Intake test
+    td: a(href="#0") Brandon Levin
+    td: a(href="#0") Brandon Levin
+    td Mar-14-2021 2:45 PM
+
+mixin tableRowCasesActivityView
+  //Table Row Cases Activity View
+  tr
+    td 23340
+    td Type of activity
+    td subject
+    td Oct-09-2021 11:13 AM
+    td Jun-02-2020 1:15 PM
+    td Abram Korsgaard
+
+mixin tableRowCaseEvidenceView
+  //Table Row Case Evidence View
+  tr
+    td 23340
+    td Dna Sample
+    td subject
+    td Feb-23-2022 9:59 AM
+    td Jun-02-2020 1:15 PM
+
+mixin tableRowComplaintsInvestigationsView
+  //Table Row Complaints Investigations View
+  tr
+    td 23340
+    td Dna Sample
+    td 600
+    td Jan-02-2021
+    td Apr-10-2021
+
+mixin tableRowCompaintTypeMandatoryReportView
+  //Table Row Compaint Type Mandatory Report View
+  tr
+    td Report - 2021 - 89
+    td Maren Lubin
+    td: span.badge.rounded-pill.text-bg-warning In Progress
+    td Sep-02-2020
+    td: span.badge.rounded-pill.text-bg-light Online Complaint
+
+mixin tableRowAllPayments
+  //Table Row All Payments
+  tr
+    td scs
+    td: a(href="#0") 000333 
+    td Student Enrollment Fee
+    td Received From Member
+    td Credit Card
+    td $10.00
+    td Aug-03-2022
+
+mixin tableRowCommittee
+  //Table Row Committee
+  tr
+    td Inquiries, Complaints and Reports Committee
+    td Committee to manage ICRC issues.
+
+
+mixin tableRowBoardMembers
+  //Table Row Board Members
+  tr
+    td John Smith
+    td Board President
+    td Oct-01-2020
+    td Oct-01-2021
+    td New York City
+    td johnsmith@example.com
+    td (416)123-1234
+
+mixin tableRowBoardVoteType
+  //Table Row Board Vote Type
+  tr
+    td Nay
+    td: span.badge.rounded-pill.text-bg-success Yes
+
+mixin tableRowCommitteeAgendaCategories
+  //Table Row Committee Agenda Categories
+  tr
+    td Emergency
+    td: span.badge.rounded-pill.text-bg-success Yes

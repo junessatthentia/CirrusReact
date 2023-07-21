@@ -1,0 +1,40 @@
+extends ../../templates/_template.pug
+
+block pageHeaderTitle
+	| Form Empty
+
+block pageContent
+
+	//Content Form
+	.content-form
+
+		//Section
+		.section
+			.h4.section__title Section Title
+			.row
+				.col-md-6
+					+input('text', 'Input', 'Placeholder', 'input-1', '', 'required', '', '')
+				.col-md-6
+					+textarea('Textarea', 'Placeholder', 'textarea-1', '', 'required', '')
+				.col-md-6
+					+radioGroup('Radio', 'radio-1', ['Yes', 'No', 'Unset'], '', '')
+				.col-md-6
+					+checkboxGroup('Checkbox', 'checkbox-1', ['Option 1', 'Option 2', 'Option 3'], '', '')
+				.col-md-6
+					+autocomplete('Autocomplete', 'Placeholder', 'autocomplete-1', '', 'required', '', '')
+				.col-md-6
+					+autocompleteIcon('Autocomplete Settings', 'Placeholder', 'autocomplete-3', '', 'required', '', '', 'iconSettings')
+				.col-md-6
+					+autocompleteIcon('Autocomplete Link', 'Placeholder', 'autocomplete-4', '', 'required', '', '', 'iconLink')
+				.col-md-6
+					+autocompleteMultiple('Autocomplete Multiple', 'Placeholder', 'autocomplete-2', '', 'required', '', '')
+				.col-md-6
+					+autocompleteMultipleIcon('Autocomplete Multiple Settings', 'Placeholder', 'autocomplete-5', '', 'required', '', '', 'iconSettings')
+				.col-md-6
+					+autocompleteMultipleIcon('Autocomplete Multiple Link', 'Placeholder', 'autocomplete-6', '', 'required', '', '', 'iconLink')
+				.col-md-6
+					+datePicker('Date', 'date-1', '', 'required', '')
+				.col-md-6
+					+timePicker('Time', 'time-1', '', 'required', '')
+				.col-md-6
+					+dateTimePicker('Date Time', 'date-time-1', '', 'required', '')

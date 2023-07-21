@@ -1,0 +1,40 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Auto Numbering
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Entity Name')
+					+thSortable('Attribute Name')
+					+thSortable('Next Number')
+					+thSortable('Display Format')
+					+thSortable('Created on')
+					+thSortable('Modified on')
+					+thSortable('Modified by')
+			tbody
+				tr
+					td Permit.b
+					td reg_permit
+					td reg_permit_number
+					td 11
+					td Permit-B-%04d
+					td Nov-02-2020 1:23 AM
+					td Jun-02-2020 1:15 PM
+					td: a(href="#0") Kianna Dokidis 
+				tr
+					td Complaint
+					td com_complaint
+					td tc_name
+					td 62
+					td Complaint - {year} - %d
+					td Nov-02-2020 1:23 AM
+					td Jun-02-2020 1:15 PM
+					td: a(href="#0") Emery Carder

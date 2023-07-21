@@ -1,0 +1,198 @@
+extends ../../templates/_template.pug
+
+block pageHeaderTitle
+	| Form Components in Pug
+
+block pageContent
+
+	//Content Form
+	.content-form
+
+		//Section
+		.styleguide__section
+
+			.row
+				.col-md-6
+					+componentTitle
+					//Section
+					.section
+						.h4.section__title Section Title
+						.row
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|//Section
+						|.section
+						|&#9;.h4.section__title Section Title
+						|&#9;.row
+		
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+input('text', 'Input', 'Placeholder', 'input-1', '', 'required', '', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+input('text', 'Input', 'Placeholder', 'input-1', '', 'required', '', '')
+					
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+textarea('Textarea', 'Placeholder', 'textarea-1', '', 'required', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+textarea('Textarea', 'Placeholder', 'textarea-1', '', 'required', '')
+				
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+radioGroup('Radio', 'radio-1', ['Yes', 'No', 'Unset'], '', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+radioGroup('Radio', 'radio-1', ['Yes', 'No', 'Unset'], '', '')
+				
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+checkboxGroup('Checkbox', 'checkbox-1', ['Option 1', 'Option 2', 'Option 3'], '', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+checkboxGroup('Checkbox', 'checkbox-1', ['Option 1', 'Option 2', 'Option 3'], '', '')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+autocomplete('Autocomplete', 'Placeholder', 'autocomplete-1', '', 'required', '', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+autocomplete('Autocomplete', 'Placeholder', 'autocomplete-1', '', 'required', '', '')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+autocompleteIcon('Autocomplete Settings', 'Placeholder', 'autocomplete-3', '', 'required', '', '', 'iconSettings')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+autocompleteIcon('Autocomplete Settings', 'Placeholder', 'autocomplete-3', '', 'required', '', '', 'iconSettings')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+autocompleteIcon('Autocomplete Link', 'Placeholder', 'autocomplete-4', '', 'required', '', '', 'iconLink')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+autocompleteIcon('Autocomplete Link', 'Placeholder', 'autocomplete-4', '', 'required', '', '', 'iconLink')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+autocompleteMultiple('Autocomplete Multiple', 'Placeholder', 'autocomplete-2', '', 'required', '', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+autocompleteMultiple('Autocomplete Multiple', 'Placeholder', 'autocomplete-2', '', 'required', '', '')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+autocompleteMultipleIcon('Autocomplete Multiple Settings', 'Placeholder', 'autocomplete-5', '', 'required', '', '', 'iconSettings')
+
+				.col-md-5
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+autocompleteMultipleIcon('Autocomplete Multiple Settings', 'Placeholder', 'autocomplete-5', '', 'required', '', '', 'iconSettings')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+autocompleteMultipleIcon('Autocomplete Multiple Link', 'Placeholder', 'autocomplete-6', '', 'required', '', '', 'iconLink')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+autocompleteMultipleIcon('Autocomplete Multiple Link', 'Placeholder', 'autocomplete-6', '', 'required', '', '', 'iconLink')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+datePicker('Date', 'date-1', '', 'required', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+datePicker('Date', 'date-1', '', 'required', '')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+timePicker('Time', 'time-1', '', 'required', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+timePicker('Time', 'time-1', '', 'required', '')
+
+		//Section
+		.styleguide__section
+			.row
+				.col-md-6
+					+componentTitle
+					+dateTimePicker('Date Time', 'date-time-1', '', 'required', '')
+
+				.col-md-6
+					+codeTitle
+					pre: code.styleguide__code
+						|.col-md-6
+						|&#9;+dateTimePicker('Date Time', 'date-time-1', '', 'required', '')
+		

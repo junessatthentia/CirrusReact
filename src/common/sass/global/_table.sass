@@ -1,0 +1,103 @@
+.table,
+.table-responsive
+	// height: 100%
+	margin-bottom: 0
+
+.table
+	// display: flex
+	// flex-direction: column
+	// min-width: 100%
+	min-width: 900px
+
+	thead,
+	tbody,
+	tfoot
+		tr
+			+fi
+				padding-left: 24px
+	thead
+		// display: table
+
+		tr
+			th
+				background-color: $bar-bg
+				font-weight: 600
+	
+	tbody
+		// flex: 1
+		// +ov
+
+		tr
+			// display: table
+			// width: 100%
+
+			+last
+				td
+					border-bottom: none
+
+// Disable hover row
+.table-hover
+	> tbody
+		> tr.table__no-hover
+			+h
+				> *
+					box-shadow: none
+
+.table-buttons
+	+mobileDownBreakpoint
+		display: flex
+		justify-content: center
+
+.table-pagination
+	+py(8)
+	+rem(12)
+	border-top: 1px solid $border
+
+	// Autocompletes
+	.form-group
+		width: 110px
+		+max767
+			width: 80px
+	
+	// Mobile
+	+max767
+		position: relative
+
+		+containers
+			position: static
+
+		.form-control
+			padding-left: 0
+		
+		.autocomplete__icon
+			padding-right: 0
+		
++max767
+	.table-pagination__btn-prev,
+	.table-pagination__btn-next
+		position: absolute
+		top: 50%
+		+tf(translateY(-50%))
+		z-index: 1
+
+	.table-pagination__btn-prev
+		left: 5px
+
+	.table-pagination__btn-next
+		right: 5px
+
+.table__th-sortable
+	cursor: pointer
+
+.table__th-sortable-content
+	display: flex
+	align-items: center
+	justify-content: space-between
+
+	.icon
+		width: 16px
+
+.table-no-record-found
+	text-align: center
+	color: $muted
+	+py(40)

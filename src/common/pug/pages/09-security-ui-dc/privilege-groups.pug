@@ -1,0 +1,21 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Privilege Groups
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Created On')
+					+thSortable('Created By')
+			tbody
+				tr
+					td Admin
+					td Created On
+					td: a(href="#0") Adam Smith

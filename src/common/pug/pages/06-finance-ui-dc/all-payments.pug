@@ -1,0 +1,24 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Payments
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Invoice')
+					+thSortable('Invoice Item')
+					+thSortable('Payment Type')
+					+thSortable('Payment Method')
+					+thSortable('Amount')
+					+thSortable('Created On')
+			tbody
+				+tableRowAllPayments
+				+tableRowAllPayments
+				+tableRowAllPayments

@@ -1,0 +1,24 @@
+include ../config/_variables.pug
+include ../mixins/mixins.pug
+
+doctype
+html(lang="zxx")
+	include components/_head.pug
+	body
+		//Platform Template
+		include components/_global-nav.pug
+		include components/navbar/_navbar.pug
+
+		//Page Container
+		.page-container
+
+			//Takes 100% height
+			.vertical-space
+				include components/page/_page-header-no-buttons.pug
+
+				//Takes all available vertical space except header and scrollable
+				.vertical-space__filler
+					include components/page/_page-content-scrollable-table.pug
+
+		include components/_footer.pug
+		include components/_scripts.pug

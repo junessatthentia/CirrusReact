@@ -1,0 +1,20 @@
+//Table Case View
+.table-responsive
+  table.table.table-hover
+    thead
+      tr
+        +thSortable('Name')
+        +thSortable('Created By')
+        +thSortable('Modified By')
+        +thSortable('Created On')
+    tbody
+      tr
+        td Test
+        td: a(href="#0") Makenna Kenter
+        td: a(href="#0") Web service
+        td Feb-23-2022 9:59 AM
+      tr
+        td Intake test
+        td: a(href="#0") Brandon Levin
+        td: a(href="#0") Web service
+        td Mar-14-2021 2:45 PM

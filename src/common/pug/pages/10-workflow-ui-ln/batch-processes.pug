@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Batch Processes
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Workflow Name')
+					+thSortable('Workflow Class')
+					+thSortable('Interval (minutes)')
+					+thSortable('Next Run Date/Time')
+					+thSortable('Last Run Date/Time')
+					+thSortable('Created on')
+					+thSortable('Workflow Parameters')
+			tbody
+				tr
+					td N/A
+					td N/A
+					td N/A
+					td N/A
+					td N/A
+					td test
+					td Nov-02-2020 1:23 AM

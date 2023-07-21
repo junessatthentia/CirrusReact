@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Status Change Requests
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Summary')
+					+thSortable('Registration')
+					+thSortable('Requested Class')
+					+thSortable('Requested Status')
+					+thSortable('Submitted Date')
+					+thSortable('Status')
+					+thSortable('Approval Date')
+			tbody
+				tr
+					td Status Change Request - Registration Class B
+					td Adam - Smith - Registration Class A
+					td Registration Class B
+					td: span.badge.text-bg-success Active
+					td Aug-09=2022
+					td: span.badge.text-bg-success Approved
+					td N/A

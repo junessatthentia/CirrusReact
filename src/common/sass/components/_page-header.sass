@@ -1,0 +1,49 @@
+.page-header
+	position: relative
+	display: flex
+	align-items: center
+	min-height: 72px
+	+py(12)
+	+px(24)
+	border-bottom: 1px solid $border
+	background-color: $bar-bg
+	
+	> .row
+		min-width: 100%
+
+	+mobileDownBreakpoint
+		+px(16)
+
+.page-header__title
+	display: flex
+	align-items: center
+
+	+max767
+		+rem(16)
+		font-weight: 400
+
+.page-header__back-btn
+	display: inline-flex
+	justify-content: start
+	align-items: center
+	vertical-align: middle
+	padding: 5px 10px
+	height: 100%
+	color: $primary
+	cursor: pointer
+	text-align: left
+
+	+min768
+		.icon
+			width: 24px
+
+.page-header__buttons
+	+mobileDownBreakpoint
+		.dropdown-menu
+			min-width: 200px
+			.btn
+				display: flex
+				justify-content: start
+				
+				.icon
+					margin-right: 12px !important

@@ -1,0 +1,19 @@
+// Container
+.container,
+.container-fluid
+	position: relative
+	+cl
+	+px(16)
+
+.container
+	+max1199
+		max-width: 96%
+
+	+max767
+		max-width: $container-width-max767
+
+// Remove Bootstrap row and col top (vertical) margin. It breaks layout
+.row
+	margin-top: 0
+	> *
+		margin-top: 0

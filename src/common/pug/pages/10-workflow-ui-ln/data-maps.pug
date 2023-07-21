@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Data Maps
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Created by')
+					+thSortable('Created on')
+					+thSortable('Modified by')
+					+thSortable('Modified on')
+			tbody
+				tr
+					td Test
+					td: a(href="#0")  Matt Muto
+					td Nov-02-2020 1:23 AM
+					td: a(href="#0")  Matt Muto
+					td Test

@@ -1,0 +1,14 @@
+//Page Content Independent Scroll Table
+//Takes 100% height
+.vertical-space
+  //Content Header. Required for left offest when page nav is closed
+  .content-header
+    include ../table/_table-header.pug
+
+  //Takes all available vertical space and scrollable
+  .vertical-space__filler
+    //Unique Page Content Start
+    block pageContent
+    //Unique Page Content End
+  
+  include ../table/_table-pagination.pug

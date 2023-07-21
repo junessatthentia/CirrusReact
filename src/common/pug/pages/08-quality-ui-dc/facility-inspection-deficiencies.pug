@@ -1,0 +1,33 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Facility Inspection Deficiencies
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Inspection')
+					+thSortable('Inspection Checklist Item (deficiency)')
+					+thSortable('Inspection Deficiency Status')
+					+thSortable('Inspection Result')
+			tbody
+				tr
+					td: a(href="#0") 00015
+					td: a(href="#0") Checklist Item A-2
+					td: span.badge.rounded-pill.text-bg-danger Not Complete
+					td: a(href="#0") 00015 - Checklist Item A-2
+				tr
+					td: a(href="#0") 00015
+					td: a(href="#0") Checklist Item A-1
+					td: span.badge.rounded-pill.text-bg-success Complete
+					td: a(href="#0") 00015 - Checklist Item A-1
+				tr
+					td: a(href="#0") 00015
+					td: a(href="#0") Checklist Item A-3
+					td: span.badge.rounded-pill.text-bg-danger Not Complete
+					td: a(href="#0") 00015 - Checklist Item A-3

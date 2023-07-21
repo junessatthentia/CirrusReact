@@ -1,0 +1,54 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Complaints View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Complaint Number')
+					+thSortable('Complainant')
+					+thSortable('Status')
+					+thSortable('Received Date')
+					+thSortable('Complaint Type')
+			tbody
+				+tableRowComplaintsView
+				tr
+					td Complaint - 2021 - 89
+					td: a(href="mailto:felicia.reid@example.com") felicia.reid@example.com
+					td N/A
+					td Sep-02-2020
+					td N/A
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				tr
+					td Complaint - 2021 - 89
+					td N/A
+					td N/A
+					td Sep-02-2020
+					td: span.badge.rounded-pill.text-bg-warning Online Complaint
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				tr
+					td Complaint - 2021 - 89
+					td N/A
+					td: span.badge.rounded-pill.text-bg-secondary Received
+					td Sep-02-2020
+					td: span.badge.rounded-pill.text-bg-secondary Mandatory Report
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView
+				+tableRowComplaintsView

@@ -1,0 +1,37 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Insurance Records
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Profile')
+					+thSortable('Insurance Type')
+					+thSortable('Insurance Company')
+					+thSortable('Provider')
+					+thSortable('Policy Number')
+					+thSortable('Expiration Date')
+					+thSortable('Occurance Amount')
+					+thSortable('Aggregate Amount')
+			tbody
+				tr
+					td N/A
+					td N/A
+					td: a(href="#0") QA Automation
+					td: a(href="#0") QA Automation
+					td: a(href="#0") 123124
+					td May-01-2011
+					td $1,000,000.00
+					td $1,000,000.00

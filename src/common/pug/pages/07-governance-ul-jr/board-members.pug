@@ -1,0 +1,28 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Board Members
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5-governance-ul-jr.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Full Name')
+					+thSortable('Title')
+					+thSortable('Term Start Date')
+					+thSortable('Term End Date')
+					+thSortable('City')
+					+thSortable('E-mail Address')
+					+thSortable('Telephone')
+			tbody
+				+tableRowBoardMembers
+				+tableRowBoardMembers
+				+tableRowBoardMembers
+				+tableRowBoardMembers
+				+tableRowBoardMembers
+				+tableRowBoardMembers
+				+tableRowBoardMembers

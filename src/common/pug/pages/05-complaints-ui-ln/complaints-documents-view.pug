@@ -1,0 +1,29 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Complaints Documents View
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Complaint')
+					+thSortable('Document Status')
+					+thSortable('Submitted Date')
+			tbody
+				tr
+					td 23340
+					td Complaint - 2021 - 17
+					td Received
+					td Mar-14-2021

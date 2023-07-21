@@ -1,0 +1,537 @@
+=smooth
+	/* Font Smoothing */
+	-webkit-font-smoothing: antialiased
+	font-smoothing: antialiased
+	-moz-osx-font-smoothing: grayscale // firefox
+
+=fm
+	font-family: $fm
+
+// width, height, line-height
+=whl($value)
+	width: $value + px
+	height: $value + px
+	line-height: $value + px
+
+=whm($value)
+	width: $value + px
+	height: $value + px
+	min-width: $value + px
+
+=whlm($value)
+	width: $value + px
+	min-width: $value + px
+	height: $value + px
+	line-height: $value + px
+
+// rounded corners
+=r($radius)
+	border-radius: $radius
+
+// rounded corners on top
+=rt($radius)
+	border-top-right-radius: $radius
+	border-top-left-radius: $radius
+
+// rounded corners on bottom
+=rb($radius)
+	border-bottom-right-radius: $radius
+	border-bottom-left-radius: $radius
+
+// rounded corners on left
+=rl($radius)
+	border-top-left-radius: $radius
+	border-bottom-left-radius: $radius
+
+// rounded corners on right
+=rr($radius)
+	border-top-right-radius: $radius
+	border-bottom-right-radius: $radius
+
+// HOVER AND FOCUS STATE
+=hf
+	&:hover, &:focus
+		@content
+
+// Hover
+=h
+	&:hover
+		@content
+
+// Focus
+=fc
+	&:focus
+		@content
+
+// color and background classes
+=cbg($class, $color)
+	.color-#{$class}
+		color: $color !important
+
+		a
+			color: inherit
+
+			+hf
+				color: inherit
+
+	.bg-#{$class}
+		background-color: $color !important
+
+// HOVER, FOCUS, ACTIVE (FOUNDATION)
+=hfa
+	&:hover,
+	&:focus,
+	&.active
+		@content
+
+=in
+	display: inline-block
+	vertical-align: top
+
+=md
+	display: inline-block
+	vertical-align: middle
+
+=ts($transition)
+	-webkit-transition: $transition
+	transition: $transition
+
+=ct
+	content: ''
+	display: block
+
+=ln($colors)
+	background: -webkit-linear-gradient($colors)
+	background: linear-gradient($colors)
+
+=lnl($colors)
+	background: -webkit-linear-gradient(left, $colors)
+	background: linear-gradient(to right, $colors)
+
+=lnlImp($colors)
+	background: -webkit-linear-gradient(left, $colors) !important
+	background: linear-gradient(to right, $colors) !important
+
+=lnr($colors)
+	background: -webkit-linear-gradient(right, $colors)
+	background: linear-gradient(to left, $colors)
+
+=tf($value)
+	-webkit-transform: $value
+	-ms-transform: $value
+	transform: $value
+
+=tfo($value)
+	-webkit-transform-origin: $value
+	-ms-transform-origin: $value
+	transform-origin: $value
+
+// MAIN TRANSITION EFFECT FOR CSS ANIMATIONS
+=tm
+	+ts(all $tt ease-out)
+
+// dots when text is longer than element
+=el
+	display: block
+	max-width: 100%
+	overflow: hidden
+	white-space: nowrap
+	text-overflow: ellipsis
+
+=mxa
+	margin-right: auto
+	margin-left: auto
+
+// horizontally centered element
+=hc
+	display: block
+	margin-right: auto
+	margin-left: auto
+
+=act
+	&:active
+		@content
+
+// This first child
+=first
+	&:first-child
+		@content
+		@content
+
+// This last child
+=last
+	&:last-child
+		@content
+		@content
+
+// all but not last
+=nl
+	&:not(:last-child)
+		@content
+
+// all but not first
+=nf
+	&:not(:first-child)
+		@content
+
+// this last child
+=l
+	&:last-child
+		@content
+
+// last item in this element
+=li
+	> *:last-child
+		@content
+
+// first item in this element
+=fi
+	> *:first-child
+		@content
+
+=abs
+	position: absolute
+	top: 0
+	right: 0
+	bottom: 0
+	left: 0
+
+// Responsive/Breakpoints
+// Min Up
+=min1400
+	@media print, screen and (min-width: 1500px)
+		@content
+
+=min1200
+	@media print, screen and (min-width: 1200px)
+		@content
+
+=min992
+	@media print, screen and (min-width: 992px)
+		@content
+
+=min768
+	@media print, screen and (min-width: 768px)
+		@content
+
+=min576
+	@media print, screen and (min-width: 576px)
+		@content
+
+// Max Down
+=max1399
+	@media print, screen and (max-width: 1399px)
+		@content
+
+=max1199
+	@media print, screen and (max-width: 1199px)
+		@content
+
+// If changing this breakpoint change also desktopBreakpoint in _variables.pug
+=mobileDownBreakpoint
+	+max991
+		@content
+
+=max991
+	@media print, screen and (max-width: 991px)
+		@content
+
+=max767
+	@media print, screen and (max-width: 767px)
+		@content
+
+=max575
+	@media print, screen and (max-width: 575px)
+		@content
+
+// Min Max Interval
+=min992-max1199
+	@media print, screen and (min-width: 992px) and (max-width: 1199px)
+		@content
+
+=min768-max991
+	@media print, screen and (min-width: 768px) and (max-width: 991px)
+		@content
+
+=min768-max1199
+	@media print, screen and (min-width: 768px) and (max-width: 1199px)
+		@content
+
+=min576-max767
+	@media print, screen and (min-width: 576px) and (max-width: 767px)
+		@content
+
+// Clearfix
+=cl
+	&:before,
+	&:after
+		+ct
+		clear: both
+
+// Z-Index
+=z($number)
+	@for $i from 0 through $number
+		.z-#{$i}
+			z-index: $i
+
+// Font Size Desktop
+=rem($font-size)
+	font-size: calc($font-size/$font-size-base-custom) + rem
+
+=em($font-size)
+	font-size: calc($font-size/$font-size-base-custom) + em
+
+// Font Size Mobile
+=remP($font-size)
+	font-size: calc($font-size/$font-size-base-custom-phone) + rem
+
+=emP($font-size)
+	font-size: calc($font-size/$font-size-base-custom-phone) + em
+
+// Animation
+=keys($name)
+	@-webkit-keyframes #{$name}
+		@content
+
+	@keyframes #{$name}
+		@content
+
+// +anim(btnPulse 2.6s infinite)
+=anim($value)
+	-webkit-animation: $value
+	animation: $value
+
+// Different
+=ns
+	-webkit-user-select: none
+	-moz-user-select: none
+	-ms-user-select: none
+	user-select: none
+
+=nw
+	white-space: nowrap
+
+=nwf
+	flex-flow: nowrap
+
+=an
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+
+// Form
+=inputs
+	input[type="color"],
+	input[type="date"],
+	input[type="datetime-local"],
+	input[type="email"],
+	input[type="month"],
+	input[type="number"],
+	input[type="password"],
+	input[type="search"],
+	input[type="tel"],
+	input[type="text"],
+	input[type="time"],
+	input[type="url"],
+	input[type="week"],
+	.form-control,
+	.form-select,
+	textarea
+		@content
+
+=inputsBordered
+	.form-control,
+	.form-select
+		@content
+
+// Placeholder
+=ph($color)
+	input,
+	textarea
+		&::-webkit-input-placeholder
+			color: $color
+		&::-moz-placeholder
+			color: $color
+		&:-ms-input-placeholder
+			color: $color
+		&::placeholder
+			color: $color
+
+// Placeholder this
+=pht($color)
+	&::-webkit-input-placeholder
+		color: $color
+	&::-moz-placeholder
+		color: $color
+	&:-ms-input-placeholder
+		color: $color
+	&::placeholder
+		color: $color
+
+// Pseudo classes
+=a
+	&:after
+		@content
+
+=b
+	&:before
+		@content
+
+=ba
+	&:before,
+	&:after
+		@content
+
+// Headings
+=hd
+	h1, .h1, h2, .h2, h3, .h3, h4, .h4, h5, .h5, h6, .h6
+		@content
+
+// Margin/Space
+=p($value)
+	padding: $value + px
+
+=px($value)
+	padding-right: $value + px
+	padding-left: $value + px
+
+=py($value)
+	padding-top: $value + px
+	padding-bottom: $value + px
+
+=m($value)
+	margin: $value + px
+
+=mx($value)
+	margin-right: $value + px
+	margin-left: $value + px
+
+=mxa
+	margin-right: auto
+	margin-left: auto
+
+=my($value)
+	margin-top: $value + px
+	margin-bottom: $value + px
+
+// Grid
+=containers
+	.container,
+	.container-fluid,
+	.container-sm,
+	.container-md,
+	.container-lg,
+	.container-xl,
+	.container-xxl
+		@content
+
+=col
+	position: relative
+	width: 100%
+	min-height: 1px
+	padding-right: 15px
+	padding-left: 15px
+
+=colAny
+	> [class^="col"]
+		@content
+
+=colAnyInside
+	[class^="col"]
+		@content
+
+// Button
+=btnH
+	&:hover
+		@content
+
+=btnF
+	&:focus
+		@content
+
+=btnHf
+	&:hover,
+	&:focus
+		@content
+
+=btnA
+	&.active,
+	&.show,
+	&:active
+		@content
+
+=btnD
+	&.disabled,
+	&:disabled
+		@content
+
+=colorGradient($class, $color)
+
+	.color-gradient-#{$class}
+		color: $color
+		+lnl( ( $color, rgba($light, 0.99) ) )
+
+		-webkit-background-clip: text
+		-webkit-text-fill-color: transparent
+
+=notOtherLists
+
+	&:not(.navbar-nav)
+		@content
+
+=classLinks
+	.btn,
+	.nav-link,
+	.dropdown-item
+		@content
+
+=notClassLinks
+
+	&:not(.btn):not(.nav-link):not(.dropdown-item)
+		@content
+
+=dropdownNoTriangle
+	.dropdown-toggle
+		+a
+			display: none
+
+=bg($img)
+	background-image: url($img)
+	background-position: center center
+	background-repeat: no-repeat
+	background-size: cover
+
+=lu
+	list-style-type: none
+	padding-left: 0
+	margin-bottom: 0
+
+=ov
+	overflow-x: hidden
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	-moz-overflow-scrolling: touch
+	overflow-scrolling: touch
+
+=ovx
+	overflow-x: auto
+	overflow-y: hidden
+	-webkit-overflow-scrolling: touch
+	-moz-overflow-scrolling: touch
+	overflow-scrolling: touch
+
+=ovy
+	overflow-x: hidden
+	overflow-y: auto
+	-webkit-overflow-scrolling: touch
+	-moz-overflow-scrolling: touch
+	overflow-scrolling: touch
+
+=gray
+	-webkit-filter: grayscale(100%)
+	filter: grayscale(100%)
+
+=grayNone
+	-webkit-filter: none
+	filter: none
+

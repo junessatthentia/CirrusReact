@@ -1,0 +1,31 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Authorized Organization
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Business')
+					+thSortable('Profile')
+					+thSortable('Created On')
+					+thSortable('Approved')
+					+thSortable('Modified On')
+			tbody
+				tr
+					td: a(href="#0") Permit Holder
+					td: a(href="#0") Text_L
+					td Sep-15-2022 12:12 PM
+					td: span.badge.text-bg-success Yes
+					td Sep-15-2022 12:12 PM

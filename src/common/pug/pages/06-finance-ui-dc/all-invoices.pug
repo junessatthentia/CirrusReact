@@ -1,0 +1,27 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Invoices
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Invoice Number')
+					+thSortable('Invoice Date')
+					+thSortable('Invoice Status')
+					+thSortable('Total Due')
+					+thSortable('Total Paid')
+					+thSortable('Balance Due')
+			tbody
+				tr
+					td 000124
+					td Aug-09-2021
+					td Paid in Full
+					td $23.09
+					td $23.09
+					td $0.00

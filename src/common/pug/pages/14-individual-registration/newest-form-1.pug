@@ -1,0 +1,33 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Newest Form 1
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Tags')
+					+thSortable('Owner')
+					+thSortable('Created By')
+					+thSortable('Modified By')
+					+thSortable('Creaated On')
+			tbody
+				tr
+					td: a(href="#0") Adam Smith
+					td
+					td: a(href="#0") Adam Smith
+					td: a(href="#0") Michelle Ng
+					td: a(href="#0") Michelle Ng
+					td Jan-30-2022

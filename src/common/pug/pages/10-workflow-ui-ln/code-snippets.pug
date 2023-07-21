@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Code Snippets
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Entity Name Name')
+					+thSortable('Created on')
+					+thSortable('Created by')
+			tbody
+				tr
+					td cust_developmentlog
+					td Nov-02-2020 1:23 AM
+					td: a(href="#0") Allison Baptista
+				tr
+					td reg_documentrequestfeeitem
+					td Nov-02-2020 1:23 AM
+					td: a(href="#0") Kaiya Dorwart

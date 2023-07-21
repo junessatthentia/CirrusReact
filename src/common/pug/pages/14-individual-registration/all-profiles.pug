@@ -1,0 +1,31 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Profiles
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('First Name')
+					+thSortable('Last Name')
+					+thSortable('Primary Email Address')
+					+thSortable('City')
+					+thSortable('Phone Number')
+			tbody
+				tr
+					td Adam
+					td Smith
+					td: a(href="mailtoo:Adamsmith@gmail.com") Adamsmith@gmail.com
+					td Toronto
+					td (416) 333-5323
+				tr
+					td Lindsey
+					td Kadin Schleifer
+					td: a(href="mailtoo:Adamsmith@gmail.com") Adamsmith@gmail.com
+					td Toronto
+					td (416) 333-5323

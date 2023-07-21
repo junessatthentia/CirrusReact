@@ -1,0 +1,17 @@
+//Page Header
+.page-header
+	.row.align-items-center.g-3
+		.col
+			.page-header__title.h2.mb-0
+				block pageHeaderTitle
+
+		//Page Header Buttons. Dropdown in mobile
+		.col-auto.ms-auto
+			.page-header__buttons.dropdown.dropdown--no-triangle.dropdown--destroy-desktop
+				.dropdown-toggle.btn.btn-sm.btn-transparent(data-bs-toggle='dropdown')
+					+iconOverflowMenuVertical
+
+				//Page Header Buttons
+				//- .dropdown-menu.btn-group.btn-group--g-2
+				.dropdown-menu
+					block pageHeaderButtons

@@ -1,0 +1,27 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Facility Inspectors
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('First Name')
+					+thSortable('Last Name')
+					+thSortable('Primary E-mail Address')
+					+thSortable('Status')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+			tbody
+				tr
+					td David
+					td Evans
+					td: a(href="mailtoo:davidevans@gmail.com") davidevans@gmail.com
+					td: span.badge.rounded-pill.text-bg-success Active
+					td Oct-20-2022 2:23 PM
+					td: a(href="#0") Adam Smith

@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Forms
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Sigular Display Name')
+					+thSortable('Entity Name')
+					+thSortable('Plural Display Name')
+			tbody
+				tr
+					td an_chart
+					td Chart
+					td Charts
+				tr
+					td com_Caseevidence
+					td Case Evidence Item
+					td Case Evidence Items

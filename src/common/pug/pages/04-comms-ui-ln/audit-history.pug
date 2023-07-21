@@ -1,0 +1,34 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Audit History
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-maximal.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	+tableHeaderBtn('Add column', 'iconColum')
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Entity Name')
+					+thSortable('Field Name')
+					+thSortable('Original Value')
+					+thSortable('New Value')
+					+thSortable('Created On')
+					+thSortable('IP Address')
+					+thSortable('Created By')
+			tbody
+				+tableRowAuditHistory
+				+tableRowAuditHistory
+				+tableRowAuditHistory
+				+tableRowAuditHistory
+				+tableRowAuditHistory
+				+tableRowAuditHistory
+				+tableRowAuditHistory

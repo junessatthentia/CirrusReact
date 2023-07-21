@@ -1,0 +1,34 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Investigation View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Case')
+					+thSortable('Investigator')
+					+thSortable('Start Date')
+					+thSortable('Status')
+					+thSortable('Summary')
+					+thSortable('End Date')
+			tbody
+				tr
+					td N/A
+					td: a(href="#0") Eric Orife 
+					td Malpractice
+					td: span.badge.rounded-pill.text-bg-warning In Progress
+					td Too much Information
+					td Dec-09-2021
+				tr
+					td N/A
+					td: a(href="#0") Eric Orife
+					td Malpractice
+					td: span.badge.rounded-pill.text-bg-warning In Progress
+					td Too much Information
+					td Dec-09-2021

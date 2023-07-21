@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Renewals
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Registration')
+					+thSortable('Submitted Date')
+					+thSortable('Destination Registration Calss')
+					+thSortable('Registration Status')
+					+thSortable('Renewal Status')
+			tbody
+				tr
+					td: a(href="#0") Adam - Smith - Registration Class A
+					td May-12-2022
+					td Registration Class B
+					td: span.badge.text-bg-success Active
+					td: span.badge.text-bg-success Active

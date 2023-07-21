@@ -1,0 +1,38 @@
+include ../config/_variables.pug
+include ../mixins/mixins.pug
+
+doctype
+html(lang="zxx")
+	include components/_head.pug
+	body
+		//Platform Template Page Nav
+		include components/_global-nav.pug
+		include components/navbar/_navbar.pug
+
+		//Page Container
+		.page-container
+
+			//Takes 100% height
+			.vertical-space
+				include components/page/_page-header.pug
+
+				//Takes all available vertical space except header and scrollable
+				.vertical-space__filler
+					//For Template Page Nav independent scroll for Page Nav and Page Content
+					.row.g-0.h-100.flex-nowrap
+						//Page Nav Collapse
+						//id='page-nav' used by Bootstrap collapse and main.js > hide page nav in mobile
+						.col-auto.page-nav.active#page-nav
+							//Takes 100% height
+							.vertical-space
+								include components/page/_page-nav-header.pug
+								
+								//Takes all available vertical space except header and scrollable
+								.vertical-space__filler
+									block pageNav
+
+						.col.h-100
+							include components/page/_page-content-scrollable.pug
+
+		include components/_footer.pug
+		include components/_scripts.pug

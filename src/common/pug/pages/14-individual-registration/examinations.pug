@@ -1,0 +1,27 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Examinations
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Tags')
+					+thSortable('Owner')
+					+thSortable('Created By')
+					+thSortable('Modified By')
+					+thSortable('Created On')
+			tbody
+				tr
+					td Exam 1
+					td N/A
+					td N//A
+					td: a(href="#0") Michelle Ng
+					td: a(href="#0") Michelle Ng
+					td Jan-06-2001

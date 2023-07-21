@@ -1,0 +1,28 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Case Categories View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Created By')
+					+thSortable('Modified By')
+					+thSortable('Created On')
+			tbody
+				tr
+					td Under Investigation
+					td: a(href="#0") Martin Mamonluk
+					td: a(href="#0") Martin Mamonluk
+					td Mar-14-2022 6:41 PM
+				tr
+					td Submitted
+					td: a(href="#0") Blair Brenot
+					td: a(href="#0") Blair Brenot
+					td Feb-23-2022 9:59 AM

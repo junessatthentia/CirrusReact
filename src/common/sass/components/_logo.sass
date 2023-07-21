@@ -1,0 +1,32 @@
+.logo
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 64px
+	height: 100%
+	background-color: $white
+	border-right: 1px solid $border
+
+	+fc
+		outline: none
+
+	img
+		max-height: 60% // Limit height for portrait (vertical) logos. For example smartgovern
+
+.logo-title
+	display: flex
+	flex-direction: column
+	justify-content: center
+	height: 100%
+	text-transform: uppercase
+	color: $grey-2
+	line-height: 1.3
+	letter-spacing: 0.03em
+	+px(15)
+	+rem(12)
+
+.logo-title__primary
+	font-weight: 800
+
+.logo-title__secondary
+	font-weight: 500

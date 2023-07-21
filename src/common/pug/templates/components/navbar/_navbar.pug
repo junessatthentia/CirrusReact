@@ -1,0 +1,21 @@
+//Navbar
+nav.navbar-custom
+	.row.g-0.h-100.align-items-center.flex-nowrap
+		.col-auto.h-100
+			.row.g-0.h-100.align-items-center.flex-nowrap
+				.col-auto.h-100
+					include ../_logo.pug
+				.col-auto.h-100
+					include _navbar-toggler.pug
+				//Hidden in phone
+				.col.h-100.d-none.d-md-block
+					include _navbar-breadcrumbs.pug
+		
+		.col-auto.ms-auto.h-100
+			.row.g-0.flex-nowrap.h-100
+				.col-auto.h-100
+					include _navbar-user-menu.pug
+				.col-auto.h-100
+					include _navbar-notifications.pug
+				.col-auto.h-100
+					include _navbar-themes.pug

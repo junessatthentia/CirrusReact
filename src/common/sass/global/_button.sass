@@ -1,0 +1,111 @@
+// Buttons
+.btn
+	display: inline-flex
+	align-items: center
+	justify-content: center
+	font-weight: 500
+	+nw
+
+	+hf
+		border-color: transparent
+
+// Button Close
+.btn
+	.btn-close
+		display: inline-block
+		font-size: 0.6em
+
+// White on colored buttons
+.btn-primary,
+.btn-secondary,
+.btn-success,
+.btn-danger,
+.btn-warning,
+.btn-info,
+.btn-dark
+	.btn-close
+		color: $white
+		background: transparent url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath d='M.293.293a1 1 0 0 1 1.414 0L8 6.586 14.293.293a1 1 0 1 1 1.414 1.414L9.414 8l6.293 6.293a1 1 0 0 1-1.414 1.414L8 9.414l-6.293 6.293a1 1 0 0 1-1.414-1.414L6.586 8 .293 1.707a1 1 0 0 1 0-1.414z'/%3e%3c/svg%3e") center/1em auto no-repeat
+
+// Variants
+.btn-light
+	background-color: $light
+	color: $main
+	border: none
+	
+	+btnHf
+		background-color: $light-hover
+		border: none
+	
+	+btnA
+		background-color: $light-active
+		border: none
+
+.btn-link
+	text-decoration: none
+	color: $primary
+
+	+hf
+		text-decoration: underline
+		color: $primary
+
+.btn-transparent
+	color: $main
+	border: none
+
+	+btnHf
+		background-color: $light-hover
+
+	+btnA
+		color: $white
+		background-color: $primary
+
+// Disabled
+.btn-transparent:disabled,
+.btn-transparent.disabled,
+fieldset:disabled .btn-transparent
+	border-color: transparent
+
+// Group
+// Right border between buttons
+.btn-group--divider
+	.btn
+		position: relative
+		// Divider
+		+a
+			+ct
+			position: absolute
+			top: -1px
+			bottom: -1px
+			left: 100%
+			left: -1px
+			z-index: 1
+			width: 1px
+			background-color: $border
+
+	> 
+		.btn,
+		.btn-group
+			+nf
+				margin-left: 0
+
+.btn-group--g-2
+	.btn
+		+nl
+			margin-right: 8px
+
+// Tags
+.btn-tags
+	display: inline-block
+	padding-right: 8px
+	padding-left: 8px
+	+nw
+
+	.btn
+		margin-top: 3px
+		margin-bottom: 3px
+		+nf
+			margin-left: 4px
+		
+		.icon
+			margin-right: -4px

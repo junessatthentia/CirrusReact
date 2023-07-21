@@ -1,0 +1,34 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Email Template Record
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('From E-mail Address')
+					+thSortable('E-mail Subject')
+					+thSortable('Created on')
+					+thSortable('Created By')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+			tbody
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail
+				+tableRowEmailTemplateRecordEmail

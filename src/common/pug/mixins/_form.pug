@@ -1,0 +1,236 @@
+mixin requiredBadge
+	//Required badge
+	span.text-danger.ms-1 *
+
+mixin formLabel(label, id, required)
+	//- States
+	- var isRequired = required === 'required'
+
+	//Form Label
+	label.form-label(for= id)= label
+		if isRequired
+			+requiredBadge
+
+//- Screen Reader Label
+mixin labelSr(id)
+	label.visually-hidden(for= id) Label
+
+mixin inputBase(type, placeholder, id, required, disabled, value, classes)
+	//- States
+	- var isRequired = required === 'required'
+	- var isDisabled = disabled === 'disabled'
+
+	input.form-control(type= type, id= id, placeholder= placeholder, required= isRequired, disabled= isDisabled, value= value, class=classes)
+
+mixin input(type, label, placeholder, id, classes, required, disabled, value)
+	//Input
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		+inputBase(type, placeholder, id, required, disabled, value)
+
+mixin checkboxRadioBase(text, name, id, classes, disabled, checked, type)
+	//- States
+	- var isDisabled = disabled === 'disabled'
+	- var isChecked = checked === 'checked'
+	
+	.form-check(class= classes)
+		input.form-check-input(type= type, id= id, name= name, required= isRequired, disabled= isDisabled, checked= isChecked)
+		label.form-check-label(for= id)= text
+
+mixin radio(text, name, id, classes, disabled, checked)
+	//Radio
+	+checkboxRadioBase(text, name, id, classes, disabled, checked, 'radio')
+
+mixin radioGroup(label, id, options, optionsClasses, formGroupClasses)
+	//Radio Inline
+	.form-group(class= formGroupClasses)
+		label.form-label= label
+			+requiredBadge
+		each option, index in options
+			if index === 0
+				+radio(option, id, `${id}-${index}`, `form-check-inline ${optionsClasses}`, disabled, 'checked')
+			else
+				+radio(option, id, `${id}-${index}`, `form-check-inline ${optionsClasses}`, disabled, '')
+
+mixin checkbox(text, name, id, classes, disabled, checked)
+	//Checkbox
+	+checkboxRadioBase(text, name, id, classes, disabled, checked, 'checkbox')
+
+mixin checkboxGroup(label, id, options, optionsClasses, formGroupClasses)
+	//Checkbox Inline
+	.form-group(class= formGroupClasses)
+		label.form-label= label
+			+requiredBadge
+		each option, index in options
+			if index === 0
+				+checkbox(option, `${id}-${index}`, `${id}-${index}`, `form-check-inline ${optionsClasses}`, disabled, 'checked')
+			else
+				+checkbox(option, `${id}-${index}`, `${id}-${index}`, `form-check-inline ${optionsClasses}`, disabled, '')
+
+mixin selectBase(placeholder, id, classes, required, disabled, value)
+	//- States
+	- var isDisabled = disabled === 'disabled'
+	
+	//Select Base
+	select.form-select(id= id, placeholder= placeholder, required= isRequired, disabled= isDisabled, value= value, class= classes)
+		//- First option if value exist is demo value
+		if value
+			option= value
+		else
+			option Option 1
+		option Option 2
+		option Option 3
+		option Option 4
+		option Option 5
+
+mixin select(label, placeholder, id, classes, required, disabled, value)
+	//Select
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		+selectBase(placeholder, id, classes, required, disabled, value)
+
+mixin selectLink(label, placeholder, id, classes, required, disabled, value, iconMixin)
+	//Select Link
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		.input-group
+			+selectBase(placeholder, id, classes, required, disabled, value)
+			//Addon
+			a.input-group-text(href="#0" title='Title') 
+				+#{iconMixin}
+
+mixin autocompleteBase(placeholder, id, classes, required, disabled, value, type)
+	.autocomplete(class= classes)
+		//Add id to dropdown to open it when click input
+		.dropdown
+			.dropdown-toggle(data-bs-toggle='dropdown')
+				+inputBase(type, placeholder, id, required, disabled, value)
+				.autocomplete__icon
+					+iconChevronDown
+			ul.dropdown-menu
+				li: .dropdown-item 1
+				li: .dropdown-item.active 2
+				li: .dropdown-item 3
+
+mixin autocomplete(label, placeholder, id, classes, required, disabled, value)
+	//Autocomplete Single
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		+autocompleteBase(placeholder, id, '', required, disabled, value)
+
+mixin autocompleteIcon(label, placeholder, id, classes, required, disabled, value, iconMixin)
+	//Autocomplete Single with Icon
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+
+		.autocomplete
+			.input-group
+				.dropdown
+					.dropdown-toggle(data-bs-toggle='dropdown')
+						+inputBase('text', placeholder, id, required, disabled, value)
+						.autocomplete__icon
+							+iconChevronDown
+					ul.dropdown-menu
+						li: .dropdown-item Option 1
+						li: .dropdown-item.active Option 2
+						li: .dropdown-item Option 3
+				//Addon
+				a.input-group-text(href="#0" title='Title') 
+					+#{iconMixin}
+					
+mixin autocompleteMultiple(label, placeholder, id, classes, required, disabled, value)
+	//Autocomplete Multiple
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+
+		.autocomplete
+			.row.g-0.align-items-center.flex-nowrap
+				//Hide this column if there is no button tags selected
+				.col-5.col-md-auto.autocomplete__col-tags
+					//Tags
+					.scroll-horizontal
+						.btn-tags
+							+btnTagSm('Deceased')
+							+btnTagSm('Revoked')
+							+btnTagSm('Revoked')
+
+				.col
+					.dropdown
+						.dropdown-toggle(data-bs-toggle='dropdown', data-bs-auto-close='outside')
+							+inputBase('text', placeholder, id, required, disabled, value)
+							.autocomplete__icon
+								+iconChevronDown
+						ul.dropdown-menu
+							li: .dropdown-item.active Option 1 Active
+							li: .dropdown-item Option 2
+							li: .dropdown-item Option 3
+							li: .dropdown-item.active Option 4 Active
+
+mixin autocompleteMultipleIcon(label, placeholder, id, classes, required, disabled, value, iconMixin)
+	//Autocomplete Multiple
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+
+		.autocomplete
+			.input-group
+				.row.g-0.align-items-center.flex-nowrap
+					//Hide this column if there is no button tags selected
+					.col-5.col-md-auto.autocomplete__col-tags
+						//Tags
+						.scroll-horizontal
+							.btn-tags
+								+btnTagSm('Deceased')
+								+btnTagSm('Revoked')
+								+btnTagSm('Revoked')
+
+					.col
+						.dropdown
+							.dropdown-toggle(data-bs-toggle='dropdown', data-bs-auto-close='outside')
+								+inputBase('text', placeholder, id, required, disabled, value)
+								.autocomplete__icon
+									+iconChevronDown
+							ul.dropdown-menu
+								li: .dropdown-item.active Option 1 Active
+								li: .dropdown-item Option 2
+								li: .dropdown-item Option 3
+								li: .dropdown-item.active Option 4 Active
+					
+				//Addon
+				a.input-group-text(href="#0" title='Title') 
+					+#{iconMixin}
+
+mixin textarea(label, placeholder, id, classes, required, disabled)
+	//- States
+	- var isRequired = required === 'required'
+	- var isDisabled = disabled === 'disabled'
+	
+	//Textarea
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		textarea.form-control(id= id, placeholder= placeholder, required= isRequired, disabled= isDisabled)
+
+mixin datePicker(label, id, classes, required, disabled)
+	//Date Picker
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		+inputBase('text', '', id, required, disabled, '', 'js-date-picker')
+		.form-group__icons
+			+iconCalendar
+
+mixin timePicker(label, id, classes, required, disabled)
+	//Time Picker
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		+inputBase('text', '', id, required, disabled, '', 'js-time-picker')
+		.form-group__icons
+			+iconTime
+
+mixin dateTimePicker(label, id, classes, required, disabled)
+	//Date Picker
+	.form-group(class=classes)
+		+formLabel(label, id, required)
+		+inputBase('text', '', id, required, disabled, '', 'js-date-time-picker')
+		.form-group__icons
+			+iconTime
+			+iconCalendar
+

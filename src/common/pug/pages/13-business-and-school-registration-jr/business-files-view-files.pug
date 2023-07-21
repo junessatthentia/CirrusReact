@@ -1,0 +1,27 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Business Files View Files
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-3-upload.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Filename')
+					+thSortable('Created On')
+					+thSortable('Created By')
+			tbody
+				tr
+					td Business_license_20211221_test.png
+					td Dec-21-2021 3:25 PM
+					td: a(href="#0") Web Service

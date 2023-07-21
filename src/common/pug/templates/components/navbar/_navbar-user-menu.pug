@@ -1,0 +1,24 @@
+//Navbar User Menu
+.dropdown.h-100.dropdown--full-screen-mobile
+	.navbar__btn.dropdown-toggle(data-bs-toggle='dropdown')
+		//Avatar
+		.avatar
+			.avatar__content TC
+			//- img.avatar__content(src="https://via.placeholder.com/48", alt="")
+			//Image variant
+			//<img className="avatar__content" src="https://via.placeholder.com/48" alt="">
+		
+	.dropdown-menu.dropdown-menu-end
+		//Close - visible in phone
+		.dropdown-menu__close.btn-close.btn-close-white
+			
+		//Helper wrapper for full-screen in phone
+		ul.dropdown-menu__content
+			
+			//Content
+			li: a.dropdown-item(href="#0")
+				+iconSettings('me-2')
+				| Settings
+			li: a.dropdown-item(href="#0")
+				+iconLogout('me-2')
+				| Logout

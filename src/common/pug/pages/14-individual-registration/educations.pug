@@ -1,0 +1,35 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Educations
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Applicant')
+					+thSortable('Education Institution')
+					+thSortable('Other Education Institution')
+					+thSortable('Education Level')
+					+thSortable('Program Name')
+					+thSortable('Completion Date')
+					+thSortable('Registration Application')
+			tbody
+				tr
+					td: a(href="#0") Adam Smith
+					td University of Toronto
+					td N/A
+					td Bachelors
+					td Engineering
+					td May-01-2011
+					td: a(href="#0") 0020431

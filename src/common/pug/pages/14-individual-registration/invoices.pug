@@ -1,0 +1,33 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Invoices
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Invoice Number')
+					+thSortable('Invoice Date')
+					+thSortable('Invoice Status')
+					+thSortable('Total Due')
+					+thSortable('Total Paid')
+					+thSortable('Balance Due')
+			tbody
+				tr
+					td 2412
+					td May-01-2011
+					td: span.badge.text-bg-success Paid
+					td $100.00
+					td $100.00
+					td $0.00

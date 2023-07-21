@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Fee Items
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('PD Plan')
+					+thSortable('Price')
+					+thSortable('Account Code')
+					+thSortable('Created On')
+					+thSortable('Created By')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+			tbody
+				tr
+					td App Type A Fee
+					td $10.00
+					td N/A
+					td Oct 20-2022 12:12 PM
+					td: a(href="#0") Ronak Patel
+					td Oct 20-2022 12:12 PM
+					td: a(href="#0") Bochi Tao

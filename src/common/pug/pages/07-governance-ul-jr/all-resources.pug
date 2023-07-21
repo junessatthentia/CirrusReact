@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Resources
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5-governance-ul-jr.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Description')
+					+thSortable('Category')
+					+thSortable('Created On')
+					+thSortable('Modified On')
+			tbody
+				tr
+					td Resource A
+					td Lorem ipsum resource sit amet.
+					td Category A
+					td June 22, 2021
+					td Feb-27-2022

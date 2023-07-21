@@ -1,0 +1,35 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Complaints Audit History
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	+tableHeaderBtn('Add column', 'iconColum')
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Entity Name')
+					+thSortable('Field Name')
+					+thSortable('Original Value')
+					+thSortable('New Value')
+					+thSortable('Created on')
+					+thSortable('IP Address')
+					+thSortable('Created by')
+			tbody
+				tr
+					td com_complaint
+					td com_complainant_address1
+					td 1254 Main Street
+					td 235 Back Alley
+					td Jun-02-2020 1:15 PM
+					td 192.0.1.563.32
+					td Abram Korsgaard

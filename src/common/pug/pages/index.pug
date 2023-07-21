@@ -1,0 +1,216 @@
+doctype html
+html(lang='zxx')
+	head
+		meta(charset='utf-8')
+		title
+			| Theme Pages
+		// VIEWPORT
+		meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes')
+		style.
+			body { margin: 0; font-family: Arial; text-align: center; }
+			ul { margin: 0; padding: 0; }
+			a, .divider { display: block; padding: 10px 0; font-size: 20px; text-decoration: none; color: #424439; border-bottom: #b7b7be 1px dotted; text-transform: capitalize; }
+			a:hover {background-color: #eee}
+			h3 {font-size: 20px; margin-bottom: 0;}
+			hr {border: none; border-bottom: #b7b7be 1px dotted; margin: 0;}
+			p {font-size: 16px;}
+			.divider {background-color: #eeeeee; font-weight: 700;}
+	body
+
+		h3 Pages
+		p Use browser search to find page by name
+		p Click on any to go
+		hr
+
+		ul
+			li: span.divider 01. Components - 1 page
+			li: a(href="01-components/form-pug.html") form pug
+			li: a(href="01-components/form.html") form
+			li: a(href="01-components/form-template-page-nav.html") form template page nav
+
+			li: span.divider 02. Platform Templates - 7 pages
+			li: a(href="02-platform-templates/platform-template.html") platform template
+			li: a(href="02-platform-templates/platform-template-page-nav.html") platform template page nav
+			li: a(href="02-platform-templates/platform-template-back-button.html") platform template back button
+			li: a(href="02-platform-templates/record.html") record
+			li: a(href="02-platform-templates/record-table.html") record table
+			li: a(href="02-platform-templates/table-in-record.html") table in record
+			li: a(href="02-platform-templates/table-in-record-files.html") table in record files
+			li: a(href="02-platform-templates/code.html") code
+
+			li: span.divider 03. DC Analytics UI-DC - 10 pages
+
+			li: span.divider 04. Comms UI-LN - 11 pages
+			li: a(href="04-comms-ui-ln/email-template-record.html") email template record
+			li: a(href="04-comms-ui-ln/audit-history.html") audit history
+			li: a(href="04-comms-ui-ln/comms-ui-files.html") comms UI files
+			li: a(href="04-comms-ui-ln/transmission-log-email-audit-records.html") transmission log email audit records
+
+			li: span.divider 05. Complaints UI-LN - 35 pages
+			li: a(href="05-complaints-ui-ln/complaints-view.html") complaints view
+			li: a(href="05-complaints-ui-ln/complaints-audit-history.html") complaints audit history
+			li: a(href="05-complaints-ui-ln/complaints-files.html") complaints files
+			li: a(href="05-complaints-ui-ln/complaints-documents-view.html") complaints documents view
+			li: a(href="05-complaints-ui-ln/cases-view.html") cases view
+			li: a(href="05-complaints-ui-ln/cases-activity-view.html") cases activity view
+			li: a(href="05-complaints-ui-ln/cases-disposition.html") cases disposition
+			li: a(href="05-complaints-ui-ln/case-evidence-view.html") case evidence view
+			li: a(href="05-complaints-ui-ln/complaints-investigations-view.html") complaints investigations view
+			li: a(href="05-complaints-ui-ln/all-investigation-view.html") all investigation view
+			li: a(href="05-complaints-ui-ln/mandatory-reports-view.html") mandatory reports view
+			li: a(href="05-complaints-ui-ln/all-public-notice-view.html") all public notice view
+			li: a(href="05-complaints-ui-ln/case-stages-view.html") case stages view
+			li: a(href="05-complaints-ui-ln/all-case-categories-view.html") all case categories view
+			li: a(href="05-complaints-ui-ln/case-status-view.html") case status view
+			li: a(href="05-complaints-ui-ln/case-disposition-type-view.html") case disposition type view
+			li: a(href="05-complaints-ui-ln/case-disposition-status-view.html") case disposition status view
+			li: a(href="05-complaints-ui-ln/public-notice-type-view.html") public notice type view
+			li: a(href="05-complaints-ui-ln/all-complaints-type-view.html") all complaints type view
+			li: a(href="05-complaints-ui-ln/compaint-type-mandatory-report-view.html") compaint type mandatory report view
+			li: a(href="05-complaints-ui-ln/compaint-type-complaint-view.html") compaint type complaint view
+
+			li: span.divider 06. Finance UI-DC - 21 pages
+			li: a(href="06-finance-ui-dc/fee-items.html") fee items
+			li: a(href="06-finance-ui-dc/payment-methods.html") payment methods
+			li: a(href="06-finance-ui-dc/payment-types.html") payment types
+			li: a(href="06-finance-ui-dc/tax-configuration.html") tax configuration
+			li: a(href="06-finance-ui-dc/all-statuses.html") all statuses
+			li: a(href="06-finance-ui-dc/all-invoices.html") all invoices
+			li: a(href="06-finance-ui-dc/payment-configuration.html") payment configuration
+			li: a(href="06-finance-ui-dc/all-payments.html") all payments
+			li: a(href="06-finance-ui-dc/business-documents.html") business documents
+			li: a(href="06-finance-ui-dc/items.html") items
+			li: a(href="06-finance-ui-dc/payments.html") payments
+
+			li: span.divider 07. Governance Ul-JR - 35 pages
+			li: a(href="07-governance-ul-jr/committee.html") committee
+			li: a(href="07-governance-ul-jr/board-agenda-categories.html") board agenda categories
+			li: a(href="07-governance-ul-jr/board-members.html") board members
+			li: a(href="07-governance-ul-jr/board-resource-category.html") board resource category
+			li: a(href="07-governance-ul-jr/board-vote-type.html") board vote type
+			li: a(href="07-governance-ul-jr/committee-agenda-categories.html") committee agenda categories
+			li: a(href="07-governance-ul-jr/committee-meetings.html") committee meetings
+			li: a(href="07-governance-ul-jr/committee-members.html") committee members
+			li: a(href="07-governance-ul-jr/committee-vote-type.html") committee vote type
+			li: a(href="07-governance-ul-jr/board-meeting-record-view.html") board meeting record view
+			li: a(href="07-governance-ul-jr/board-resource-categories.html") board resource categories
+			li: a(href="07-governance-ul-jr/board-resource-details-record-view.html") board resource details record view
+			li: a(href="07-governance-ul-jr/all-resources.html") all resources
+
+			li: span.divider 08. Quality UI-DC - 11 pages
+			li: a(href="08-quality-ui-dc/professional-development-plans.html") professional development plans
+			li: a(href="08-quality-ui-dc/pd-activities.html") pd activities
+			li: a(href="08-quality-ui-dc/professional-development-answers.html") professional development answers
+			li: a(href="08-quality-ui-dc/facility-inspections.html") facility inspections
+			li: a(href="08-quality-ui-dc/facility-inspectors.html") facility inspectors
+			li: a(href="08-quality-ui-dc/facility-inspection-deficiencies.html") facility inspection deficiencies
+
+			li: span.divider 09. Security UI-DC - 16 pages
+			li: a(href="09-security-ui-dc/login-sessions.html") login sessions
+			li: a(href="09-security-ui-dc/portal-users.html") portal users
+			li: a(href="09-security-ui-dc/privilege-groups.html") privilege groups
+			li: a(href="09-security-ui-dc/all-privileges.html") all privileges
+			li: a(href="09-security-ui-dc/security-questions.html") security questions
+			li: a(href="09-security-ui-dc/system-user-by-groups.html") system user by groups
+			li: a(href="09-security-ui-dc/all-system-user-groups.html") all system user groups
+			li: a(href="09-security-ui-dc/record-table-temp.html") record table temp
+			li: a(href="09-security-ui-dc/system-users.html") system users
+
+			li: span.divider 10. Workflow UI-LN - 50 pages
+			li: a(href="10-workflow-ui-ln/batch-processes.html") batch processes
+			li: a(href="10-workflow-ui-ln/auto-numbering.html") auto numbering
+			li: a(href="10-workflow-ui-ln/number-mangers.html") number mangers
+			li: a(href="10-workflow-ui-ln/dynamic-processes.html") dynamic processes
+			li: a(href="10-workflow-ui-ln/forms-workflow-ui-ln.html") forms workflow UI-LN
+			li: a(href="10-workflow-ui-ln/code-snippets.html") code snippets
+			li: a(href="10-workflow-ui-ln/code-dependencies.html") code dependencies
+			li: a(href="10-workflow-ui-ln/data-imports.html") data imports
+			li: a(href="10-workflow-ui-ln/data-maps.html") data maps
+			li: a(href="10-workflow-ui-ln/case-statuses-workflow-ui-ln.html") case statuses
+			li: a(href="10-workflow-ui-ln/case-statuses-view-workflow-ui-ln.html") case statuses view
+			li: a(href="10-workflow-ui-ln/all-case-categories-view-workflow-ui-ln.html") all case categories view
+
+			li: span.divider 11. Config UI-DC LN JR - 90 pages
+			li: a(href="11-config-ui-dc-ln-jr/countries-config-view.html") countries config view
+			li: a(href="11-config-ui-dc-ln-jr/province-config-view.html") province config view
+			li: a(href="11-config-ui-dc-ln-jr/genders-config-view.html") genders config view
+			li: a(href="11-config-ui-dc-ln-jr/genders-record-view.html") genders record view
+			li: a(href="11-config-ui-dc-ln-jr/ethnicities-config-view.html") ethnicities config view
+			li: a(href="11-config-ui-dc-ln-jr/language-config-view.html") language config view
+			li: a(href="11-config-ui-dc-ln-jr/employer-config-view.html") employer config view
+			li: a(href="11-config-ui-dc-ln-jr/educational-instituation-config-view.html") educational instituation config view
+			li: a(href="11-config-ui-dc-ln-jr/exam-type-config-view.html") exam type config view
+			li: a(href="11-config-ui-dc-ln-jr/regulators-config-view.html") regulators config view
+			li: a(href="11-config-ui-dc-ln-jr/insurance-amounts-config-view.html") insurance amounts config view
+			li: a(href="11-config-ui-dc-ln-jr/insurance-company-config-view.html") insurance company config view
+			li: a(href="11-config-ui-dc-ln-jr/document-template-config-view.html") document template config view
+			li: a(href="11-config-ui-dc-ln-jr/portal-configuration.html") portal configuration
+			li: a(href="11-config-ui-dc-ln-jr/string-resources.html") string resources
+			li: a(href="11-config-ui-dc-ln-jr/portals.html") portals
+			li: a(href="11-config-ui-dc-ln-jr/all-registration-classes.html") all registration classes
+			li: a(href="11-config-ui-dc-ln-jr/reg-applicaiton-types.html") reg applicaiton types
+			li: a(href="11-config-ui-dc-ln-jr/all-application-instructions.html") all application instructions
+			li: a(href="11-config-ui-dc-ln-jr/all-application-req-documents.html") all application req documents
+			li: a(href="11-config-ui-dc-ln-jr/reg-application-renewal-declaration.html") reg application-renewal declaration
+			li: a(href="11-config-ui-dc-ln-jr/reg-application-Renewal-attestation.html") reg application-Renewal attestation
+			li: a(href="11-config-ui-dc-ln-jr/reg-applicaiton-fees.html") reg applicaiton fees
+			li: a(href="11-config-ui-dc-ln-jr/registration-renewal-fees.html") registration renewal fees
+			li: a(href="11-config-ui-dc-ln-jr/registration-document-templates.html") registration document templates
+			li: a(href="11-config-ui-dc-ln-jr/business-license-classes.html") business license classes
+			li: a(href="11-config-ui-dc-ln-jr/business-application-type.html") business application type
+			li: a(href="11-config-ui-dc-ln-jr/business-application-instruction.html") business application instruction
+			li: a(href="11-config-ui-dc-ln-jr/business-application-req-documents.html") business application req documents
+			li: a(href="11-config-ui-dc-ln-jr/business-application-renewal-declaration.html") business application renewal declaration
+			li: a(href="11-config-ui-dc-ln-jr/business-application-renewal-attestation.html") business application renewal attestation
+			li: a(href="11-config-ui-dc-ln-jr/business-application-fees.html") business application fees
+			li: a(href="11-config-ui-dc-ln-jr/business-renewal-fees.html") business renewal fees
+			li: a(href="11-config-ui-dc-ln-jr/inspection-checklist.html") inspection checklist
+			li: a(href="11-config-ui-dc-ln-jr/facility-inspection-checklist-categories.html") facility inspection checklist categories
+			li: a(href="11-config-ui-dc-ln-jr/facility-inspection-items.html") facility inspection items
+			li: a(href="11-config-ui-dc-ln-jr/facility-inspection-other-requirements.html") facility inspection other requirements
+			li: a(href="11-config-ui-dc-ln-jr/inspection-checklist-groups.html") inspection checklist groups
+			li: a(href="11-config-ui-dc-ln-jr/plan-periods.html") plan periods
+			li: a(href="11-config-ui-dc-ln-jr/units-of-measure.html") units of measure
+			li: a(href="11-config-ui-dc-ln-jr/all-professional-development-questions.html") all professional development questions
+			li: a(href="11-config-ui-dc-ln-jr/activity-types.html") activity types
+			li: a(href="11-config-ui-dc-ln-jr/activity-questions.html") activity questions
+
+			li: span.divider 12. Portal Templates - 14 pages
+
+			li: span.divider 13. Business &amp; School Registration-JR - 59 pages
+			li: a(href="13-business-and-school-registration-jr/all-business-reg-view.html") all business reg view
+			li: a(href="13-business-and-school-registration-jr/business-audit-history-view.html") business audit history view
+			li: a(href="13-business-and-school-registration-jr/business-files-view-files.html") business files view files
+			li: a(href="13-business-and-school-registration-jr/b-auth-rep-view.html") b auth rep view
+			li: a(href="13-business-and-school-registration-jr/business-app-view.html") business app view
+			li: a(href="13-business-and-school-registration-jr/business-service-view.html") business service view
+			li: a(href="13-business-and-school-registration-jr/сases-view-business-and-school-registration-jr.html") сases view
+			li: a(href="13-business-and-school-registration-jr/change-reason.html") change reason
+			li: a(href="13-business-and-school-registration-jr/document-request-view.html") document request view
+			li: a(href="13-business-and-school-registration-jr/employees-view.html") employees view
+			li: a(href="13-business-and-school-registration-jr/facility-inspection-view.html") facility inspection view
+			li: a(href="13-business-and-school-registration-jr/insurance-view.html") insurance view
+			li: a(href="13-business-and-school-registration-jr/invoice-view.html") invoice view
+			li: a(href="13-business-and-school-registration-jr/licenses-view.html") licenses view
+			li: a(href="13-business-and-school-registration-jr/shareholders-view.html") shareholders view
+			li: a(href="13-business-and-school-registration-jr/staffListing-view.html") staffListing view
+			li: a(href="13-business-and-school-registration-jr/submitted-document-view.html") submitted document view
+			li: a(href="13-business-and-school-registration-jr/all-permit-view.html") all permit view
+			li: a(href="13-business-and-school-registration-jr/business-application-view.html") business application view
+			li: a(href="13-business-and-school-registration-jr/all-permit-renewal-view.html") all permit renewal view
+			li: a(href="13-business-and-school-registration-jr/all-auth-rep-view.html") all auth rep view
+			li: a(href="13-business-and-school-registration-jr/business-submitted-doc-view.html") business submitted doc view
+			li: a(href="13-business-and-school-registration-jr/all-document-request-view.html") all document request view
+			li: a(href="13-business-and-school-registration-jr/all-school-user-view.html") all school user view
+			li: a(href="13-business-and-school-registration-jr/all-school-view.html") all school view
+			li: a(href="13-business-and-school-registration-jr/students-view.html") students view
+			li: a(href="13-business-and-school-registration-jr/enrollment-view.html") enrollment view
+			li: a(href="13-business-and-school-registration-jr/practice-hour-report-view.html") practice hour report view
+			li: a(href="13-business-and-school-registration-jr/all-facilities-view.html") all facilities view
+			li: a(href="13-business-and-school-registration-jr/all-facility-applications.html") all facility applications
+			li: a(href="13-business-and-school-registration-jr/all-facility-locations.html") all facility locations
+			li: a(href="13-business-and-school-registration-jr/all-facility-renewals.html") all facility renewals
+			li: a(href="13-business-and-school-registration-jr/all-inspections.html") all inspections
+
+			li: span.divider 14. Individual Registration - 48 pages
+

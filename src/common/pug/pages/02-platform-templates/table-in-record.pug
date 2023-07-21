@@ -1,0 +1,40 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Table In Record. Table Buttons Maximal
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-maximal.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	+tableHeaderBtn('Save', 'iconSave')
+	+tableHeaderBtn('Delete', 'iconTrashCan')
+	+tableHeaderBtn('Print', 'iconPrint')
+	+tableHeaderBtn('Print', 'iconPrint')
+	+tableHeaderBtn('Print', 'iconPrint')
+	+tableHeaderBtn('Print', 'iconPrint')
+	+tableHeaderBtn('Print', 'iconPrint')
+	+tableHeaderBtn('Print', 'iconPrint')
+	+tableHeaderBtn('Print', 'iconPrint')
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Column Name')
+					+thSortable('Column Name')
+					+thSortable('Column Name')
+					+thSortable('Column Name')
+					+thSortable('Column Name')
+					+thSortable('Column Name')
+			tbody
+				+tableRowRecord
+				+tableRowRecord
+				+tableRowRecord
+				+tableRowRecord
+				+tableRowRecord
+				+tableRowRecord

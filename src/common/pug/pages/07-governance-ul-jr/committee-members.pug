@@ -1,0 +1,31 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Committee Members
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5-governance-ul-jr.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Full Name')
+					+thSortable('Title')
+					+thSortable('Committee')
+					+thSortable('Term Start Date')
+					+thSortable('Term End Date')
+					+thSortable('City')
+					+thSortable('E-mail Address')
+					+thSortable('Telephone')
+			tbody
+				tr
+					td Susan Kelly
+					td Committee Member
+					td Quality Assurance Committee
+					td November, 22, 2021
+					td November, 22, 2022
+					td Toronto
+					td susankelly@example.com
+					td (416)123-1234

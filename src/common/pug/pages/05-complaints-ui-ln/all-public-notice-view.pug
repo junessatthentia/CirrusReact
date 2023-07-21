@@ -1,0 +1,40 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Public Notice View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Summary')
+					+thSortable('Notice Type')
+					+thSortable('Effective Date')
+					+thSortable('Effective Date')
+					+thSortable('Visible on Public Register')
+					+thSortable('Registration')
+					+thSortable('Permit')
+			tbody
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				tr
+					td Disclose private information
+					td: span.badge.rounded-pill.text-bg-secondary Discipline Decision
+					td Jan-02-2021
+					td N/A
+					td: span.badge.rounded-pill.text-bg-secondary No
+					td: a(href="#0") Omar Kenter
+					td: a(href="#0") Business Licence C-9963
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView
+				+tableRowAllPublicNoticeView

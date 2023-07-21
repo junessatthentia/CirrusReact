@@ -1,0 +1,16 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Cases Disposition
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	include ../../components/table/_table-case-view.pug

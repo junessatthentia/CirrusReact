@@ -1,0 +1,34 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Province Config View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('ISO Code')
+					+thSortable('Country')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+					+thSortable('Created On')
+			tbody
+				tr
+					td British Columbia
+					td: a(href="#0") BC 
+					td: a(href="#0") Canada
+					td Dec-09-2022 4:33 PM
+					td: a(href="#0") Web Service
+					td Dec-09-2022 4:33 PM
+				tr
+					td Oklahoma
+					td: a(href="#0") OK
+					td: a(href="#0") United States of America
+					td Dec-09-2022 4:33 PM
+					td: a(href="#0") Web Service
+					td Dec-09-2022 4:33 PM

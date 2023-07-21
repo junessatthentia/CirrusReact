@@ -1,0 +1,43 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Tax Configuration
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Primary Tax  Name')
+					+thSortable('Primary Tax Rate (%)')
+					+thSortable('Supplemental Tax Name ')
+					+thSortable('Supplemental Tax Rate (%)')
+					+thSortable('Default')
+					+thSortable('State/Province/Territory')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+			tbody
+				tr
+					td Ontario Tax
+					td GST
+					td 10.00
+					td HST
+					td !.00
+					td Yes
+					td Ontario
+					td Aug-03-2022 3:00 PM
+					td: a(href="#0") Mark Lopez
+				tr
+					td Manitoba Tax
+					td HST
+					td 13.00
+					td N/A
+					td N/A
+					td No
+					td Manitoba
+					td May-13-2022 1:54 PM
+					td: a(href="#0") Mark Lopez

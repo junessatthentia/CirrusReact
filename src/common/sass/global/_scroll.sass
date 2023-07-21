@@ -1,0 +1,36 @@
+// Takes 100% height
+.vertical-space
+	display: flex
+	flex-direction: column
+	height: 100%
+	min-width: 100%
+
+// Takes all available vertical space and scrollable
+.vertical-space__filler
+	flex: 1
+	+ov
+
+// Inside columns move scrollbar to right
+[class^="col"]
+	> .vertical-space
+		margin-right: -15px
+		margin-left: -15px
+
+		> .vertical-space__filler
+			padding-right: 15px
+			padding-left: 15px
+
+// Turn off if column has no gutters
+.g-0 [class^="col"],
+[class^="col"].px-0
+	> .vertical-space
+		margin-right: 0
+		margin-left: 0
+		> .vertical-space__filler
+			padding-right: 0
+			padding-left: 0
+
+.scroll-horizontal
+	padding-bottom: 17px
+	margin-bottom: -17px
+	+ovx

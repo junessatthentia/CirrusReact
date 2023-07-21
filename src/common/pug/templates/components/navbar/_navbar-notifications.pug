@@ -1,0 +1,18 @@
+//Navbar Notifications
+.dropdown.h-100.dropdown--full-screen-mobile.dropdown--no-triangle.dropdown--md
+	.navbar__btn.dropdown-toggle(data-bs-toggle='dropdown')
+		.position-relative
+			+iconNotification
+			.badge.badge--sm.bg-danger.rounded-pill.badge--bottom-right 4
+		
+	.dropdown-menu
+		//Close - visible in phone
+		.dropdown-menu__close.btn-close.btn-close-white
+			
+		//Helper wrapper for full-screen in phone
+		ul.dropdown-menu__content
+			
+			//Content
+			include _navbar-notification.pug
+			include _navbar-notification.pug
+			include _navbar-notification.pug

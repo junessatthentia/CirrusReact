@@ -1,0 +1,27 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Professional Development Plans
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Registrations')
+					+thSortable('Sceduled Date')
+					+thSortable('Total PD Units')
+					+thSortable('Persiod Start Date')
+					+thSortable('Period End Date')
+			tbody
+				tr
+					td CE - Zubier - Test
+					td: a(href="#0") Zubier - Test - Registration...
+					td Oct-20-2022
+					td 1.00
+					td Oct-01-2022
+					td Oct-31-2022

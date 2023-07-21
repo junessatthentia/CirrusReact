@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Board Resource Details Record View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5-governance-ul-jr.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Description')
+					+thSortable('Category')
+					+thSortable('Created On')
+					+thSortable('Modified On')
+			tbody
+				tr
+					td Resource Test for Design
+					td Design team resources
+					td Category A
+					td June 22, 2021
+					td Feb-27-2022

@@ -1,0 +1,23 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Countries Config View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('ISO Code')
+					+thSortable('Created On')
+					+thSortable('Modified On')
+			tbody
+				tr
+					td Costa Rica
+					td CR
+					td Dec-09-2022 4:33 PM
+					td Dec-09-2022 4:33 PM

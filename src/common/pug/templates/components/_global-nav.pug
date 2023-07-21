@@ -1,0 +1,50 @@
+//Global Nav. Main
+//id="global-nav" used to toggle nav from Navbar Toggler
+.global-nav.global-nav--main#global-nav.modal(tabindex='-1')
+
+	//Global Nav Header
+	.global-nav__header
+		.row.g-0.h-100.flex-nowrap
+			.col-auto.h-100
+				include _logo.pug
+			.col.h-100
+				//Logo Title
+				.logo-title
+					.logo-title__primary Thentia Cloud
+					.logo-title__secondary Register
+
+			.col-auto.h-100
+				//Global Nav Toggler
+				button.navbar__btn.btn-light(type='button' data-bs-dismiss='modal')
+					+iconClose
+					
+	.modal-dialog
+					
+		//Global Nav Content			
+		.modal-content
+
+			//Global Nav Menu
+			ul.global-nav__menu
+				//First Level
+				li
+					+globalNavLinkToggler('Themes', '#global-nav-section-1')
+					
+					//Second Level
+					ul.collapse#global-nav-section-1
+						li: a.active(href='../thentia/advanced-search-layout.html') thentia
+						li: a(href='../regulate/advanced-search-layout.html') regulate
+						li: a(href='../governance/advanced-search-layout.html') governance
+						li: a(href='../compliance/advanced-search-layout.html') compliance
+						li: a(href='../analytics/advanced-search-layout.html') analytics
+						li: a(href='../opsrhythm/advanced-search-layout.html') opsrhythm
+						li: a(href='../vectorleap/advanced-search-layout.html') vectorleap
+
+				//First Level
+				li
+					+globalNavLinkToggler('Navigation Category', '#global-nav-section-2', 'active')
+					
+					//Second Level
+					ul.collapse#global-nav-section-2
+						li: a(href='#0') Navigation Link
+						li: a.active(href='#0') Navigation Link
+						li: a(href='#0') Navigation Link Last

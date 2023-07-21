@@ -1,0 +1,35 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Other Registrations
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Applicant')
+					+thSortable('Jurisdiction')
+					+thSortable('Regulator')
+					+thSortable('Licensing Board')
+					+thSortable('Registration Number')
+					+thSortable('Registration Date')
+					+thSortable('Expiration Date')
+			tbody
+				tr
+					td: a(href="#0") Adam Smith
+					td N/A
+					td N/A
+					td Test
+					td 2145231
+					td Jan-30-2021
+					td Jan-30-2022

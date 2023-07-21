@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Business Reg View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Legal Name')
+					+thSortable('Business No.')
+					+thSortable('Business City')
+					+thSortable('Main Telephone')
+					+thSortable('Primary Email')
+			tbody
+				+tableRowAllBusinessRegViewPhoneEmail
+				+tableRowAllBussinessRegViewPhoneEmail2
+				+tableRowAllBusinessRegViewPhoneEmail
+				+tableRowAllBussinessRegViewPhoneEmail2
+				+tableRowAllBusinessRegViewDate
+				+tableRowAllBusinessRegViewPhoneEmail
+				+tableRowAllBussinessRegViewPhoneEmail2
+				+tableRowAllBusinessRegViewDate
+				+tableRowAllBusinessRegViewPhoneEmail
+				+tableRowAllBussinessRegViewPhoneEmail2

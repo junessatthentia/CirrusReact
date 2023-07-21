@@ -1,0 +1,61 @@
+extends ../../templates/_template-page-nav.pug
+
+block pageHeaderTitle
+	| Record
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-maximal.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block contentHeader
+
+block pageContent
+	//Content Form
+	.content-form
+		//Section
+		.section
+			.h4.section__title Section Header
+			.row.g-4
+				.col-md-6
+					//- mixin input(type, label, placeholder, id, classes, required, disabled, value)
+					+input('text', 'Text Input', 'Placeholder', 'input-1', '', 'required', '', '')
+				
+				.col-md-6
+					//Radio Inline
+					.form-group
+						label.form-label Radio Inline
+							+requiredBadge
+						//- mixin radio(text, name, id, classes, disabled, checked)
+						+radio('Yes', 'radio-name-4', 'radio-name-4-radio-1', 'form-check-inline', '', 'checked')
+						+radio('No', 'radio-name-4', 'radio-name-4-radio-2', 'form-check-inline', '')
+						+radio('Unset', 'radio-name-4', 'radio-name-4-radio-3', 'form-check-inline', '')
+
+				.col-md-6
+					//- mixin autocompleteIcon(label, placeholder, id, classes, required, disabled, value, iconMixin)
+					+autocompleteIcon('Autocomplete/Select Single with Icon', 'Placeholder', 'autocomplete-8', '', 'required', '', '', 'iconSettings')
+				
+				.col-md-6
+					//- mixin datePicker(label, id, classes, required, disabled)
+					+datePicker('Date Picker', 'date-picker-1', '', 'required', '')
+				
+				.col-md-6
+					//- mixin autocompleteIcon(label, placeholder, id, classes, required, disabled, value, iconMixin)
+					+autocompleteIcon('Autocomplete/Select Single with Icon', 'Placeholder', 'autocomplete-11', '', 'required', '', '', 'iconLink')
+				
+				.col-md-6
+					//- mixin timePicker(label, id, classes, required, disabled)
+					+timePicker('Time Picker', 'time-picker-2', '', 'required', '')
+				
+				.col-md-6
+					//- mixin autocomplete(label, placeholder, id, classes, required, disabled, value)
+					+autocomplete('Autocomplete/Select Single', 'Placeholder', 'autocomplete-1', '', 'required', '', '')
+				
+				.col-md-6
+					//- mixin dateTimePicker(label, id, classes, required, disabled)
+					+dateTimePicker('Date Time Picker', 'date-time-picker-1', '', 'required', '')
+		
+				.col-md-6
+					//- mixin textarea(label, placeholder, id, classes, required, disabled)
+					+textarea('Textarea/Editor', 'Placeholder', 'textarea-2', '', 'required', '')

@@ -1,0 +1,28 @@
+head
+	
+	meta(charset='utf-8')
+
+	//Title
+	title themeNameCapitalize
+		
+	//Viewport
+	meta(name='viewport', content='width=device-width, initial-scale=1, minimum-scale=1, maximum-scale=3.0, user-scalable=yes')
+	
+	//Customized website preview - when share it to social networks or anywhere
+	meta(property='og:title', content='themeNameCapitalize')
+	meta(property='og:description', content='App Description when Share to Social')
+	meta(property='og:image', content='img/share-preview.jpg')
+
+	// Google Fonts
+	link(rel="preconnect" href="https://fonts.googleapis.com")
+	link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+	link(href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet")
+
+	//Favicon
+	//- !!! no spaces before/after faviconInsert !!!
+	//- it should be compiled to <!--faviconInsert-->
+	//- gulp will replace this string (<!--faviconInsert-->) to theme favicon
+	//faviconInsert
+
+	//Styles
+	link(rel="stylesheet" href='../../css/theme.css')

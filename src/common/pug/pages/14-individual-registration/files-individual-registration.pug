@@ -1,0 +1,27 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Files Individual Registration
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-3-upload.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Filename')
+					+thSortable('Created On')
+					+thSortable('Created By')
+			tbody
+				tr
+					td reg_profile
+					td Oct-23-2021 12:56 PM
+					td: a(href="#0") Adam Smith

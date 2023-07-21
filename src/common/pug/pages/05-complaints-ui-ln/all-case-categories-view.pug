@@ -1,0 +1,14 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Case Categories View
+
+block tableButtons
+	+tableHeaderBtn('Add', 'iconAdd')
+	+tableHeaderBtn('Edit', 'iconRequestQuote')
+	+tableHeaderBtn('Delete', 'iconTrashCan')
+	+tableHeaderBtn('Add column', 'iconColum')
+	+tableHeaderBtn('ViewName', 'iconTableSplit')
+
+block pageContent
+	include ../../components/table/_table-case-view.pug

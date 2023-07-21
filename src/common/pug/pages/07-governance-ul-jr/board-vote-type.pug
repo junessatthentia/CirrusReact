@@ -1,0 +1,18 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Board Vote Type
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5-governance-ul-jr.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Active')
+			tbody
+				+tableRowBoardVoteType
+				+tableRowBoardVoteType

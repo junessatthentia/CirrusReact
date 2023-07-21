@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Name Change Requests
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Profile')
+					+thSortable('Request Date')
+					+thSortable('Previous Last Name')
+					+thSortable('Previous First Name')
+					+thSortable('New Last Name')
+					+thSortable('New First Name')
+					+thSortable('Status')
+			tbody
+				tr
+					td Adam Smith
+					td Ju-23-2021
+					td Anderson
+					td Adam
+					td Smith
+					td Adam
+					td: span.badge.text-bg-warning Submitted

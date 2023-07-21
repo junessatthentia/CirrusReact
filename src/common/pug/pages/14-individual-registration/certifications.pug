@@ -1,0 +1,33 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Сertifications
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('File Number')
+					+thSortable('Stage')
+					+thSortable('Category')
+					+thSortable('Received Date')
+					+thSortable('Status')
+					+thSortable('Closed Date')
+			tbody
+				tr
+					td: a(href="#0") Adam Smith
+					td Certification Type A
+					td Test
+					td 142342
+					td Jun-23-2022
+					td N/A

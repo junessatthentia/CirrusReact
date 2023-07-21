@@ -1,0 +1,66 @@
+// Main Theme File. Includes all others
+// !!! IMPORTANT !!! Follow order including SASS parts
+// ----------------------------------
+
+// 1. Variables
+// Customize Bootstrap: https://getbootstrap.com/docs/5.2/customize/sass/
+// Include any default variable overrides here (though functions won't be available)
+
+// 1.1. Common variables. Used for all themes
+@import '../../../common/sass/config/_variables-common.sass'
+
+// 1.2. Theme variables. THIS theme variables. !!! After _variables-common !!!
+// Unique Theme Variables. Should be after "_variables-common.sass" to override
+@import '_variables-theme.sass'
+
+// 2. SASS Mixins
+@import "../../../common/sass/config/_mixins.sass"
+
+// 3. Bootstrap. Installed as npm package. !!! After common and theme variables !!!
+@import "../../../../node_modules/bootstrap/scss/bootstrap"
+
+// 4. Global base components (mostly restyled Bootsrap components) to override what was not overrided in Bootsrap theme. !!! After Bootstrap !!!
+// Global SASS Part - typography, buttons, forms, common theme styles. It use theme variables to compile Theme CSS
+//@import "../../../common/sass/global/**/*"
+@import "../../../common/sass/global/_badge.sass"
+@import "../../../common/sass/global/_breadcrumb.sass"
+@import "../../../common/sass/global/_button.sass"
+@import "../../../common/sass/global/_dropdown.sass"
+@import "../../../common/sass/global/_form.sass"
+@import "../../../common/sass/global/_grid.sass"
+@import "../../../common/sass/global/_heading.sass"
+@import "../../../common/sass/global/_hr.sass"
+@import "../../../common/sass/global/_icon.sass"
+@import "../../../common/sass/global/_label.sass"
+@import "../../../common/sass/global/_link.sass"
+@import "../../../common/sass/global/_margin.sass"
+@import "../../../common/sass/global/_media.sass"
+@import "../../../common/sass/global/_scroll.sass"
+@import "../../../common/sass/global/_section.sass"
+@import "../../../common/sass/global/_table.sass"
+@import "../../../common/sass/global/_typography.sass"
+@import "../../../common/sass/global/_utilities.sass"
+
+
+
+
+// 5. Plugins. Before components and pages to overwrite if needed
+// Date Time Picker: https://flatpickr.js.org/
+//@import "../../../common/sass/plugins/**/*"
+
+// 6. Site Components. To override if something has style different from Bootstrap theme and global components
+// Imported here to make work gulp-sass-glob:
+// gulp-sass-glob allows to import all sass files from directory. But it doesn't work with nested files. For example, we can not use sass-glob in common.sass and then import common.sass here
+// https://www.npmjs.com/package/gulp-sass-glob
+//@import "../../../common/sass/components/**/*"
+@import "../../../common/sass/components/_avatar.sass"
+@import "../../../common/sass/components/_box-link.sass"
+@import "../../../common/sass/components/_footer.sass"
+@import "../../../common/sass/components/_global-nav.sass"
+@import "../../../common/sass/components/_logo.sass"
+@import "../../../common/sass/components/_navbar.sass"
+@import "../../../common/sass/components/_page-header.sass"
+@import "../../../common/sass/components/_styleguide.sass"
+
+// 7. Pages if needed here
+// ...

@@ -1,0 +1,90 @@
+$triangle-size: 0.225em
+
+.dropdown-toggle
+	cursor: pointer
+
+	+a
+		border-top-width: $triangle-size
+		border-right-width: $triangle-size
+		border-left-width: $triangle-size
+		// margin-top: $triangle-size
+		margin-left: 2*$triangle-size
+
+.dropdown-item
+	white-space: initial
+
+// Variants
+// Full screen in tablet/phone. Used in Navbar dropdowns
+.dropdown-menu__close
+	display: none
+
+.dropdown-menu__content
+	+lu
+
++max991
+	.dropdown--full-screen-mobile
+		// Overlay
+		.dropdown-menu
+			position: fixed !important
+			top: 0 !important
+			left: 0 !important
+			z-index: 5
+			width: 100%
+			height: 100%
+			max-height: 100%
+			margin-top: 0
+			border-radius: 0
+			+tf(none !important)
+			background-color: rgba(#000, 0.7)
+
+		// Content
+		.dropdown-menu__content
+			position: absolute
+			top: 70px
+			left: 50%
+			+tf(translateX(-50%))
+			// margin-bottom: 30px
+			width: $container-width-max767
+			max-width: calc(100% - 32px)
+			max-height: 70vh // Facllback
+			max-height: calc(100% - 130px) // Prevent dropdown-menu to be out of screen
+			+mxa
+			+py(16)
+			background-color: $white
+			border-radius: $dropdown-border-radius
+			box-shadow: $sdl
+			+ov
+	
+	.dropdown-menu__close
+		display: block
+		position: fixed
+		top: 16px
+		right: 16px
+		z-index: 1
+		cursor: pointer
+
+.dropdown--no-triangle
+	+dropdownNoTriangle
+
+// Variants
+.dropdown--md
+	+min992
+		.dropdown-menu
+			width: 395px
+
+.dropdown--destroy-desktop
+	+min1200
+		.dropdown-toggle
+			display: none
+
+		.dropdown-menu
+			position: static
+			min-width: 0
+			border: none
+			display: block
+			padding: 0
+		
+		.dropdown-item
+			width: auto
+			paddding: inherit
+			clear: none

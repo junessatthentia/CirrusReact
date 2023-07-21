@@ -1,0 +1,28 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Record Table Temp
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	+tableHeaderBtn('Add', 'iconCloudUpload')
+	+tableHeaderBtn('Edit', 'iconRequestQuote')
+	+tableHeaderBtn('Delete', 'iconTrashCan')
+	+tableHeaderBtn('Refresh', 'iconRenew')
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Group')
+					+thSortable('System User')
+			tbody
+				tr
+					td: a(href="#0") Priviledge Group: Non adiminstrative
+					td: a(href="#0") Adam Smith
+				tr
+					td: a(href="#0") Priviledge Group: Admin
+					td: a(href="#0") Michelle Ng

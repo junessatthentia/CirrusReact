@@ -1,0 +1,14 @@
+html
+	font-size: $font-size-base-custom + px
+
+body
+	word-break: break-word
+	color: $main
+	+fm
+	+smooth
+
+// Fix font awesome vertical align. FA icons have bottom space
+.fa, .far, .fas
+	+b
+		display: block
+		+tf(translateY(0.1em))

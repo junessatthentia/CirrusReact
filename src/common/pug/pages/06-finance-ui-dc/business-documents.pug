@@ -1,0 +1,33 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| 000783 - Invoice: Business Documents
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-6.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Business')
+					+thSortable('Request Type')
+					+thSortable('Request Date')
+					+thSortable('Organization Name')
+					+thSortable('Address')
+					+thSortable('City')
+			tbody
+				tr
+					td: a(href="#0") Bell
+					td Letter of Good Standing
+					td Sep-15-2022
+					td Example
+					td 11 Adelaide St E
+					td Toronto

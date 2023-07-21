@@ -1,0 +1,26 @@
+//Footer
+footer.footer
+	.row.h-100.g-3.flex-nowrap
+		.col-sm.col-8.h-100
+			.scroll-horizontal
+				//Buttons
+				.btn-group.btn-group--divider
+					button.btn.btn-lg.btn-light Tab
+						span.btn-close.ms-2
+					button.btn.btn-lg.btn-light Tab
+						span.btn-close.ms-2
+					button.btn.btn-lg.btn-primary Current Page
+						span.btn-close.ms-2
+		.col-auto.col-4.h-100
+			.row.g-0.align-items-center.justify-content-end.h-100.flex-nowrap
+				.col-auto
+					.btn-group.dropup
+						button.badge.rounded-pill.text-bg-light.text-bg-light.dropdown-toggle(data-bs-toggle='dropdown')
+							| 3
+						ul.dropdown-menu
+							li: button.dropdown-item 1
+							li: button.dropdown-item 2
+							li: button.dropdown-item 3
+
+				.col-auto
+					button.btn.btn-link.btn-sm.text-black.mt-1 Clear All

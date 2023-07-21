@@ -1,0 +1,42 @@
+// Font/Text
+.font-main
+	+fm
+
+// Different
++z(10)
+
+.cursor-pointer
+	cursor: pointer
+
+// Colors
+.bg-light
+	background-color: $light
+
+// Used in Badges
+.text-bg-light
+	background-color: $light !important
+	color: $main !important
+
+.text-bg-warning
+	background-color: $warning-light !important
+	color: $main !important
+
+.text-bg-success
+	background-color: $success-light !important
+	color: $main !important
+
+.text-bg-danger
+	background-color: $danger-light !important
+	color: $main !important
+
+// Default/Active properties when toggle classe with js
+.component
+	&.active
+		.component__default
+			display: none
+		
+		.component__active
+			display: block
+
+.component__active
+	display: none

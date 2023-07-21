@@ -1,0 +1,22 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All System User Groups
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Group')
+					+thSortable('System User')
+			tbody
+				tr
+					td: a(href="#0") Priviledge Group: Non adiminstrative
+					td: a(href="#0") Adam Smith
+				tr
+					td: a(href="#0") Priviledge Group: Admin
+					td: a(href="#0") Michelle Ng

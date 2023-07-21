@@ -1,0 +1,27 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Employment Details
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Profile')
+					+thSortable('Employer')
+					+thSortable('Other Employer Name')
+					+thSortable('Start Date')
+					+thSortable('End Date')
+					+thSortable('Primary')
+			tbody
+				tr
+					td: a(href="#0") Adam Smith
+					td: a(href="#0") Employer A
+					td N//A
+					td Oct-06-2005
+					td N/A
+					td Yes

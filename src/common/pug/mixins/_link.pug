@@ -1,0 +1,14 @@
+//- Global Nav
+mixin globalNavLinkToggler(text, target, classes)
+	//Collapse Toggler
+	button(class= classes, data-bs-toggle='collapse', data-bs-target= target)
+		span= text
+		+iconChevronDown('ms-auto')
+
+//- Themes dropdown in Navbar
+mixin boxLink(title, img, link, classes)
+	//Box Link
+	a.box-link.btn.btn-light(class= classes, href= link)
+		.box-link__img
+			img(src= img, alt="")
+		.h6.box-link__title= title

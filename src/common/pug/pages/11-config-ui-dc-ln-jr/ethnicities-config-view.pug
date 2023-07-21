@@ -1,0 +1,24 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Ethnicities Config View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Ask to Specify')
+			tbody
+				tr
+					td African-American
+					td
+						span.badge.rounded-pill.text-bg-danger No
+				tr
+					td Other Asian
+					td
+						span.badge.rounded-pill.text-bg-success Yes

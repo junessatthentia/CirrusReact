@@ -1,0 +1,27 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Payment Methods
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Is Accepted?')
+					+thSortable('Is Offline?')
+					+thSortable('Heading')
+					+thSortable('Description')
+					+thSortable('Notes')
+			tbody
+				tr
+					td Cash
+					td No
+					td Yes
+					td N/A
+					td N/A
+					td N/A

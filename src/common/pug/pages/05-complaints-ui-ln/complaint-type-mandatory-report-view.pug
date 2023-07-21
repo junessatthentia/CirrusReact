@@ -1,0 +1,39 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Compaint Type Mandatory Report View
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Mandatory Report Number')
+					+thSortable('Respondent')
+					+thSortable('Status')
+					+thSortable('Received Date')
+					+thSortable('Complaint Type')
+			tbody
+				+tableRowCompaintTypeMandatoryReportView
+				+tableRowCompaintTypeMandatoryReportView
+				+tableRowCompaintTypeMandatoryReportView
+				+tableRowCompaintTypeMandatoryReportView
+				tr
+					td Report - 2021 - 89
+					td Emerson Schleifer
+					td: span.badge.rounded-pill.text-bg-secondary Received
+					td Mar-14-2021
+					td: span.badge.rounded-pill.text-bg-secondary Mandatory Report
+				+tableRowCompaintTypeMandatoryReportView
+				+tableRowCompaintTypeMandatoryReportView
+				+tableRowCompaintTypeMandatoryReportView
+				+tableRowCompaintTypeMandatoryReportView

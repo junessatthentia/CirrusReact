@@ -1,0 +1,43 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Facility Inspections
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Inspection Number')
+					+thSortable('Business')
+					+thSortable('Business License Class')
+					+thSortable('Inspection Type')
+					+thSortable('Inspection Date')
+					+thSortable('Inspector')
+					+thSortable('Inspection Status')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+			tbody
+				tr
+					td: a(href="#0") 00015
+					td: a(href="#0") Business A
+					td Class A
+					td Initial
+					td Oct-20-2022
+					td: a(href="#0") Adam Smith
+					td: span.badge.rounded-pill.text-bg-success Completed - Compliant
+					td Oct-20-2022 11:01 PM
+					td: a(href="#0") Michelle Ng
+				tr
+					td: a(href="#0") 00016
+					td: a(href="#0") Business B
+					td Class B
+					td Routine
+					td Oct-19-2022
+					td: a(href="#0") Dale Adams
+					td: span.badge.rounded-pill.text-bg-danger Completed - Compliant
+					td Oct-20-2022 11:01 PM
+					td: a(href="#0") Michelle Ng

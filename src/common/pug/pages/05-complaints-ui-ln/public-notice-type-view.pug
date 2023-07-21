@@ -1,0 +1,19 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Public Notice Type View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Created By')
+					+thSortable('Modified By')
+					+thSortable('Created On')
+			tbody
+				+tableRowViewTypes

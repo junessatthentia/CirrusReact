@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Public Notices
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Summary')
+					+thSortable('Notice Type')
+					+thSortable('Effective Date')
+					+thSortable('Scheduled Removal Date')
+					+thSortable('Visible on Public Register')
+					+thSortable('Registration')
+					+thSortable('Permit')
+			tbody
+				tr
+					td Needs help bigly
+					td Discipline Decision
+					td Nov-13-2022
+					td Oct-06-2023
+					td Yes
+					td Adam - Smith - Registration Class A
+					td Yes

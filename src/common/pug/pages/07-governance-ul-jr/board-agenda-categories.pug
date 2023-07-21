@@ -1,0 +1,23 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Board Agenda Categories
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5-governance-ul-jr.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Description')
+			tbody
+				+tableRowCommittee
+				+tableRowCommittee
+				+tableRowCommittee
+				+tableRowCommittee
+				+tableRowCommittee
+				+tableRowCommittee
+				+tableRowCommittee

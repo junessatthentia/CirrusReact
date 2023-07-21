@@ -1,0 +1,31 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Number Mangers
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Name')
+					+thSortable('Next Number')
+					+thSortable('Display Formatting')
+					+thSortable('Created on')
+					+thSortable('Modified on')
+			tbody
+				tr
+					td registrant.sda.instructor
+					td 5
+					td SDA{0,number,000000}
+					td 1Dec-09-2021 11:13 AM
+					td Jan-02-2021 1:15 PM
+				tr
+					td registrant.sda.instructor
+					td 5
+					td N/A
+					td Nov-02-2020 1:23 AM
+					td May-12-2022 11:13 AM

@@ -1,0 +1,13 @@
+mixin pageHeaderBtn(text, iconMixin, classes)
+	button.btn.btn-transparent.dropdown-item(class= classes)
+		+#{iconMixin}('me-1')
+		span= text
+
+mixin tableHeaderBtn(text, iconMixin, classes)
+	button.btn.btn-transparent.btn-sm(class= classes)
+		+#{iconMixin}('me-1')
+		span.d-none(class=`d-${desktopBreakpoint}-block`)= text
+
+mixin btnTagSm(text)
+	.btn.btn-sm.btn-light.rounded-pill= text
+		+iconClose('ms-1')

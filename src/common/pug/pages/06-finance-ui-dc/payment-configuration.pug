@@ -1,0 +1,25 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Payment Configuration
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Provider Name')
+					+thSortable('Currency')
+					+thSortable('Production?')
+					+thSortable('Modified On')
+					+thSortable('Modified By')
+			tbody
+				tr
+					td scs
+					td N/A
+					td No
+					td Jan-09-2022 4:42 PM
+					td Adam Smith

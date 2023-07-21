@@ -1,0 +1,23 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Dynamic Processes
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Workflow Name')
+					+thSortable('Workflow Class')
+					+thSortable('Workflow Parameters')
+					+thSortable('Created on')
+			tbody
+				tr
+					td Test
+					td Matt Muto
+					td N/A
+					td Nov-02-2020 1:23 AM

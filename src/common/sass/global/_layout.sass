@@ -1,0 +1,53 @@
+html
+	height: 100%
+
+body
+	position: relative
+	height: 100%
+	padding-top: $bar-height
+	padding-bottom: $bar-height
+
+.page-container
+	position: relative
+	z-index: 0
+	display: flex
+	flex-direction: column
+	min-width: 100%
+	height: 100%
+	+ov
+	+rem(14)
+
+.content-header
+	height: $bar-height
+	border-bottom: 1px solid $border
+	border-left: 1px solid $border
+	margin-left: -1px
+	background-color: $bar-bg
+
+.content-header__container
+	position: relative
+  
+	+px(16)
+	> .row
+		flex: 1
+
+	+min768
+		display: flex
+		align-items: center
+		height: 100%
+
+	+max991
+		padding-left: 0
+		padding-right: 9px
+	
+	+max767
+		height: 100%
+
+.content-form
+	padding: 34px 64px
+
+	+max1199
+		+px(32)
+	
+	+max767
+		padding: 12px 16px

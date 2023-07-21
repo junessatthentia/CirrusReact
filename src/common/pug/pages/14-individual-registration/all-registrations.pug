@@ -1,0 +1,29 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| All Registrations
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Registrant')
+					+thSortable('Registration Number')
+					+thSortable('Registration Class')
+					+thSortable('Registration Status')
+					+thSortable('Initial Registration Date')
+					+thSortable('Current Effective Date')
+					+thSortable('Current Expiration Date')
+			tbody
+				tr
+					td: a(href="#0") Adam Smith
+					td 4212r23
+					td Registration Class B
+					td: span.badge.text-bg-success Active
+					td Jul-21-2022
+					td Jul-30-2022
+					td Jul-12-2024

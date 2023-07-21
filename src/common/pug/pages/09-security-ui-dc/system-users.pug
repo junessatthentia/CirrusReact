@@ -1,0 +1,23 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| System Users
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Last Name')
+					+thSortable('First Name')
+					+thSortable('E-mail Address')
+					+thSortable('Is Administrative?')
+			tbody
+				tr
+					td So
+					td Angel
+					td: a(href="mailtoo:angel.sothentia.com") angel.sothentia.com
+					td: span.badge.rounded-pill.text-bg-success Yes

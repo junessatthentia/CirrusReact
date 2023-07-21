@@ -1,0 +1,49 @@
+extends ../../templates/_template-table.pug
+
+block pageHeaderTitle
+	| Mandatory Reports View
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-5.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Mandatory Report  Number')
+					+thSortable('Respondent')
+					+thSortable('Status')
+					+thSortable('Received Date')
+					+thSortable('Complaint Type')
+			tbody
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				tr
+					td Report - 2021 - 89
+					td: a(href="#0") Charlie George
+					td N/A
+					td Oct-09-2021
+					td N/A
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				tr
+					td Report - 2021 - 89
+					td N/A
+					td: span.badge.rounded-pill.text-bg-secondary Received
+					td Mar-14-2021
+					td: span.badge.rounded-pill.text-bg-secondary Mandatory Report
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView
+				+tableRowMandatoryReportsView

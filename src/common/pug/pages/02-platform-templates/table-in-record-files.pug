@@ -1,0 +1,27 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Table In Record Files
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-maximal.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	+tableHeaderBtn('Save', 'iconSave')
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Filename')
+					+thSortable('Created On')
+					+thSortable('Created By')
+			tbody
+				tr
+					td Image.jpg
+					td 01/22/2058 23:26
+					td: a(href="#0")  Phillip Septimus

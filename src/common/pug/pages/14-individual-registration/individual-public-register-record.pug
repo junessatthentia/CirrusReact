@@ -1,0 +1,35 @@
+extends ../../templates/_template-page-nav-table.pug
+
+block pageHeaderTitle
+	| Individual Public Register Record
+
+block pageHeaderButtons
+	include ../../components/page-header/_page-header-buttons-4.pug
+
+block pageNav
+	include ../../components/_page-nav.pug
+
+block tableButtons
+	include ../../components/table/_table-header-buttons-4-refresh.pug
+
+block pageContent
+	.table-responsive
+		table.table.table-hover
+			thead
+				tr
+					+thSortable('Registration Number')
+					+thSortable('First Name')
+					+thSortable('Last Name')
+					+thSortable('City')
+					+thSortable('Registration Type')
+					+thSortable('Registration Status')
+					+thSortable('Has Public Discipline?')
+			tbody
+				tr
+					td 234214124
+					td Adam
+					td Smith
+					td N/A
+					td Registration Type A
+					td: span.badge.text-bg-success Active
+					td No
