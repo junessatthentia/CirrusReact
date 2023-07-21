@@ -1,6 +1,6 @@
 import React from 'react';
-import './button.css';
-
+import './themes/thentia/sass/theme.sass';
+import { Col, Container, Row, Button } from 'react-bootstrap';
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -27,7 +27,7 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const tcButton = ({
   primary = false,
   size = 'medium',
   backgroundColor,
