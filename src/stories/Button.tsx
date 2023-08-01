@@ -1,6 +1,6 @@
 import React from 'react';
-import './themes/thentia/sass/theme.sass';
-import { Col, Container, Row, Button } from 'react-bootstrap';
+import '../themes/thentia/sass/theme.sass'
+
 interface ButtonProps {
   /**
    * Is this the principal call to action on the page?
@@ -13,7 +13,7 @@ interface ButtonProps {
   /**
    * How large should the button be?
    */
-  size?: 'small' | 'medium' | 'large';
+  size?: 'tc-btn-xs' | 'btn-sm' | 'default' | 'btn-lg';
   /**
    * Button contents
    */
@@ -27,18 +27,18 @@ interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const tcButton = ({
+export const Button = ({
   primary = false,
-  size = 'medium',
+  size = 'default',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'storybook-button--primary' : 'storybook-button--secondary';
+  const mode = primary ? 'btn-primary' : 'btn-outline-primary';
   return (
     <button
       type="button"
-      className={['storybook-button', `storybook-button--${size}`, mode].join(' ')}
+      className={['btn', size, mode].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >

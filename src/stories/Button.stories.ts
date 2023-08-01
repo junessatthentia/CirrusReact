@@ -1,11 +1,11 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
-import { tcButton } from './Button';
+import { Button } from './Button';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
   title: 'Example/Button',
-  component: tcButton,
+  component: Button,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
     layout: 'centered',
@@ -16,7 +16,7 @@ const meta = {
   argTypes: {
     backgroundColor: { control: 'color' },
   },
-} satisfies Meta<typeof tcButton>;
+} satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
@@ -25,26 +25,33 @@ type Story = StoryObj<typeof meta>;
 export const Primary: Story = {
   args: {
     primary: true,
-    label: 'Button',
+    label: 'Primary',
   },
 };
 
 export const Secondary: Story = {
   args: {
-    label: 'Button',
+    label: 'Secondary',
   },
 };
 
-export const Large: Story = {
+export const XSmall: Story = {
   args: {
-    size: 'large',
+    size: 'tc-btn-xs',
     label: 'Button',
   },
 };
 
 export const Small: Story = {
   args: {
-    size: 'small',
+    size: 'btn-sm',
+    label: 'Button',
+  },
+};
+
+export const Large: Story = {
+  args: {
+    size: 'btn-lg',
     label: 'Button',
   },
 };

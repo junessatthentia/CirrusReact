@@ -1,7 +1,6 @@
 import React from 'react';
-import './App.css';
-
 import './themes/thentia/sass/theme.sass';
+import './App.css';
 
 import Accordion from 'react-bootstrap/Accordion';
 import { Col, Container, Row, Button } from 'react-bootstrap';
