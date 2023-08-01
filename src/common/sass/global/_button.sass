@@ -31,7 +31,6 @@
 .btn-light
 	background-color: $light
 	color: $main
-	border: none
 	
 	+btnHf
 		background-color: $light-hover
@@ -110,6 +109,104 @@ fieldset:disabled .btn-transparent
 		.icon
 			margin-right: -4px
 
+
+// ***************** TC CLASSES
+.btn:hover,.btn:focus
+	border-color: $black
+
+.btn .btn-close
+	display: inline-block
+	font-size: .6em
+
+.btn-sm,.btn-group-sm>.btn
+	padding: 8px 8px
+	font-size: 0.875rem
+
+.btn-sm .tc-icon,.btn-group-sm>.btn .tc-icon
+	width: 16px
+	min-width: 16px
+
 .tc-btn-xs
 	padding: 6px 14px
 	font-size: 0.75rem
+
+.tc-btn-xs .tc-icon
+	width: 16px
+	min-width: 16px
+
+.btn-primary,.btn-warning,.btn-info
+	color: $white
+
+.btn-primary:hover,.btn-primary:focus,.btn-primary:active,.btn-primary.tc-active,.btn-warning:hover,.btn-warning:focus,.btn-warning:active,.btn-warning.tc-active,.btn-info:hover,.btn-info:focus,.btn-info:active,.btn-info.tc-active
+	color: $white
+
+.btn-primary.disabled,.btn-primary:disabled,.btn-warning.disabled,.btn-warning:disabled,.btn-info.disabled,.btn-info:disabled
+	color: $white
+
+.btn-info:hover,.btn-info:focus
+	background-color: #206fce
+
+.btn-info:active,.btn-info.tc-active
+	background-color: #1e6ac5
+
+.btn-warning:hover,.btn-warning:focus
+	background-color: #fcb019
+
+.btn-warning:active,.btn-warning.tc-active
+	background-color: #fbad0f
+
+.btn-outline-warning:hover,.btn-outline-warning:focus,.btn-outline-warning:active,.btn-outline-warning.tc-active,.btn-outline-info:hover,.btn-outline-info:focus,.btn-outline-info:active,.btn-outline-info.tc-active
+	color: #fff
+
+.btn-outline-primary:hover,.btn-outline-primary:focus,.btn-outline-primary:active,.btn-outline-primary.tc-active
+	color: #fff
+
+.btn-light:hover,.btn-light:focus
+	background-color: #e4e4e4
+	border: none
+
+.btn-light.tc-active,.btn-light.tc-show,.btn-light:active
+	background-color: #dfdfdf
+	border: none
+
+.btn-link
+	text-decoration: none
+	color: #782b90
+
+.btn-link:hover,.btn-link:focus
+	text-decoration: underline
+	color: #782b90
+
+.tc-btn-transparent
+	color: #414141
+	border: none
+
+.tc-btn-transparent:hover,.tc-btn-transparent:focus
+	background-color: #e4e4e4
+
+.tc-btn-transparent.tc-active,.tc-btn-transparent.tc-show,.tc-btn-transparent:active
+	background-color: #f4edf6
+
+.tc-btn-primary-light
+	border: none
+
+.tc-btn-primary-light:hover
+	color: #782b90
+	background-color: #d6d6d6
+
+.tc-btn-primary-light:focus
+	color: #782b90
+	background-color: #f3ecf5
+
+.tc-btn-primary-light:active
+	color: #782b90
+	background-color: #c8c8c8
+
+.btn-primary:hover,.btn-primary:focus
+	background-color: #68257c
+
+.btn-primary:active,.btn-primary.tc-active
+	background-color: #571f69
+
+.tc-btn-transparent:disabled,.tc-btn-transparent.disabled,fieldset:disabled .tc-btn-transparent
+	border-color: rgba(0,0,0,0)
