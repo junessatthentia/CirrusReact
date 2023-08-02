@@ -6,6 +6,10 @@ interface ButtonProps {
    * Is this the principal call to action on the page?
    */
   primary?: boolean;
+    /**
+   * Does this button play a role?
+   */
+  level?: 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'link';
   /**
    * What background color to use
    */
@@ -30,15 +34,17 @@ interface ButtonProps {
 export const Button = ({
   primary = false,
   size = 'default',
+  level = 'primary',
   backgroundColor,
   label,
   ...props
 }: ButtonProps) => {
-  const mode = primary ? 'btn-primary' : 'btn-outline-primary';
+  const mode = primary ? 'btn-' : 'btn-outline-';
+  const role = level;
   return (
     <button
       type="button"
-      className={['btn', size, mode].join(' ')}
+      className={['btn', size, `${mode}${role}`].join(' ')}
       style={{ backgroundColor }}
       {...props}
     >

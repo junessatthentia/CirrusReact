@@ -52,7 +52,7 @@ export const Small: Story = {
 export const Large: Story = {
   args: {
     size: 'btn-lg',
-    label: 'Button',
+    label: 'Large Button',
   },
 };
 
@@ -60,7 +60,8 @@ export const Large: Story = {
 export const Warning: Story = {
   args: {
     primary: true,
-    label: 'Delete now',
-    backgroundColor: 'red',
+    label: 'Take Caution',
+    backgroundColor: 'warning',
+    level: 'warning',
   }
 };
