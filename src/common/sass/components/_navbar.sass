@@ -80,3 +80,258 @@
 	height: 5px
 	border-radius: 50%
 	background-color: $danger
+
+// ******************* TC CLASSES
+.tc-logo
+	display: flex
+	align-items: center
+	justify-content: center
+	width: 64px
+	height: 100%
+	background-color: #fff
+	border-right: 1px solid #e1e1e1
+
+.tc-logo:focus
+	outline: none
+
+.tc-logo img
+	max-height: 60%
+
+.tc-logo-title
+	display: flex
+	flex-direction: column
+	justify-content: center
+	height: 100%
+	text-transform: uppercase
+	color: #6f7271
+	line-height: 1.3
+	letter-spacing: .03em
+	padding-right: 15px
+	padding-left: 15px
+	font-size: 0.75rem
+
+.tc-logo-title__primary
+	font-weight: 800
+
+.tc-logo-title__secondary
+	font-weight: 500
+
+.tc-logo-portal
+	display: flex
+	align-items: center
+	height: 100%
+	width: 170px
+
+.tc-logo-portal__img
+	width: 40px
+	min-width: 40px
+
+.tc-logo-portal__text
+	margin-left: 12px
+	font-size: 0.9375rem
+	font-weight: 600
+	text-transform: uppercase
+	line-height: 1.2
+	color: #4e4e4e
+
+.tc-mode-switch
+	height: 100%
+
+.tc-mode-switch .offcanvas-end
+	width: 200px
+
+.tc-mode-switch__link
+	position: relative
+	display: flex
+	align-items: center
+	height: 56px
+	margin-top: -1px
+	z-index: 1
+	padding-right: 16px
+	padding-left: 16px
+	text-transform: uppercase
+	font-weight: 500
+	font-size: 0.6875rem
+	letter-spacing: .1em
+	color: #414141
+
+.tc-mode-switch__link:before
+	content: ""
+	display: block
+	position: absolute
+	bottom: 0
+	left: 16px
+	right: 16px
+	border-bottom: 1px solid #c9c9c9
+	z-index: -1
+
+.tc-mode-switch__link:visited
+	color: #414141
+
+.tc-mode-switch__link:hover,.tc-mode-switch__link:focus,.tc-mode-switch__link:active,.tc-mode-switch__link.tc-active
+	background-color: #f4edf6
+	color: #414141
+	z-index: 2
+
+.tc-mode-switch__link:hover:before,.tc-mode-switch__link:focus:before,.tc-mode-switch__link:active:before,.tc-mode-switch__link.tc-active:before
+	display: none
+
+.tc-mode-switch__link-img
+	margin-right: 16px
+
+.tc-navbar-notifications
+	height: 100%
+
+.tc-navbar-notifications .offcanvas-end
+	width: 360px
+
+.tc-navbar-notifications .offcanvas-header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	padding: 5px 8px
+	border-bottom: 1px solid #e1e1e1
+
+.tc-navbar-notifications .offcanvas-title
+	color: #000
+
+.tc-navbar-notifications__btn-delete .icon
+	width: 16px
+	min-width: 16px
+
+.tc-navbar-notification
+	display: flex
+	align-items: start
+	border-bottom: 1px solid #e1e1e1
+	padding: 16px 16px 20px
+	color: inherit
+
+.tc-navbar-notification:hover,.tc-navbar-notification:focus,.tc-navbar-notification:active,.tc-navbar-notification.tc-active
+	background-color: #f4edf6
+	color: inherit
+
+.tc-navbar-notification__icon
+	width: 18px
+	min-width: 18px
+	margin-right: 13px
+
+.tc-navbar-notification__icon .icon
+	display: block
+	width: 100%
+	min-width: 100%
+
+.tc-navbar-notification__content
+	color: #000
+
+.tc-navbar-notification__title
+	color: #414141
+	font-weight: 600
+
+.tc-navbar-notification__body
+	margin-bottom: 8px
+	font-size: 0.875rem
+
+.tc-navbar-notification__body p
+	margin-bottom: 0
+
+.tc-navbar-notification__date-time
+	margin-bottom: 0
+	font-size: 0.75rem
+
+.tc-navbar-custom,.tc-global-nav__header
+	height: 48px
+
+.tc-navbar-custom
+	position: fixed
+	top: 0
+	left: 0
+	right: 0
+	z-index: 3
+	background-color: #5c3768
+	background-color: #5c3768
+	color: #fff
+
+.tc-navbar-custom .tc-global-nav__toggler
+	background-color: #fff
+
+.tc-navbar-custom .tc-logo,.tc-navbar-custom .tc-global-nav__toggler
+	border-bottom: 1px solid #e1e1e1
+
+.tc-navbar-custom .offcanvas
+	border-left-color: #e1e1e1
+	box-shadow: 0 4px 20px 0 rgba(0,0,0,.15)
+	color: #414141
+
+.tc-navbar-custom .offcanvas.offcanvas-end
+	top: 48px
+
+.tc-navbar-custom .offcanvas .offcanvas-body
+	padding: 8px 0
+
+.tc-navbar-custom .tc-navbar-notifications .offcanvas-body
+	padding: 0
+
+.tc-navbar-custom .tc-navbar-notifications .offcanvas.offcanvas-end
+	border-left: none
+
+.tc-navbar__btn
+	position: relative
+	z-index: 1046
+	display: flex
+	align-items: center
+	justify-content: center
+	min-width: 56px
+	height: 100%
+	padding-right: 12px
+	padding-left: 12px
+	margin-bottom: 0
+	border: none
+	background: none
+	-webkit-appearance: none
+	-moz-appearance: none
+	appearance: none
+	cursor: pointer
+	-webkit-transition: all .3s ease-out
+	transition: all .3s ease-out
+
+.offcanvas.show~.tc-navbar__btn,.offcanvas.showing~.tc-navbar__btn,.tc-navbar__btn:hover,.tc-navbar__btn.show
+	background-color: #fff
+	color: #414141
+
+.tc-navbar-user-menu .dropdown-menu
+	padding-top: 0px
+	padding-bottom: 0px
+
+.tc-navbar-portal
+	height: 72px
+	padding-right: 12px
+	padding-left: 12px
+	border-bottom: 1px solid #d5d5d5
+	background-color: #fff
+
+.tc-navbar-portal .tc-navbar__btn
+	min-width: 0
+
+.tc-navbar-portal .dropdown-toggle:after
+	display: none
+
+.tc-navbar-portal .tc-avatar__content
+	background-color: #20c997
+	color: #414141
+
+@media (min-width: 768px)
+	.tc-navbar-portal
+		padding-left:24px
+
+
+	.tc-navbar-language .dropdown-toggle
+		color: #782b90
+		font-weight: 500
+		font-size: 0.75rem
+		text-transform: uppercase
+
+	.tc-navbar-language .dropdown-toggle:after
+		display: none
+
+	.tc-navbar-language .dropdown-menu
+		min-width: 53px

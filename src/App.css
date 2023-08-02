@@ -1156,7 +1156,7 @@ textarea.form-control {
   }
 }
 
-.row {
+/* .row {
   margin-top: 0
 }
 
@@ -1205,7 +1205,7 @@ hr {
   margin-left: 0;
   margin-right: 0;
   opacity: 1
-}
+} */
 
 .tc-divider-dark {
   background-color: #c9c9c9
@@ -2971,7 +2971,7 @@ a:focus,button:focus,.btn:focus,.dropdown-toggle:focus,.form-control:focus,.flat
   padding-left: 16px
 }
 
-.tc-logo {
+/* .tc-logo {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -3030,9 +3030,9 @@ a:focus,button:focus,.btn:focus,.dropdown-toggle:focus,.form-control:focus,.flat
   text-transform: uppercase;
   line-height: 1.2;
   color: #4e4e4e
-}
+} */
 
-.tc-mode-switch {
+/* .tc-mode-switch {
   height: 100%
 }
 
@@ -3156,9 +3156,9 @@ a:focus,button:focus,.btn:focus,.dropdown-toggle:focus,.form-control:focus,.flat
 .tc-navbar-notification__date-time {
   margin-bottom: 0;
   font-size: 0.75rem
-}
+} */
 
-.tc-navbar-custom,.tc-global-nav__header {
+/* .tc-navbar-custom,.tc-global-nav__header {
   height: 48px
 }
 
@@ -3274,7 +3274,7 @@ a:focus,button:focus,.btn:focus,.dropdown-toggle:focus,.form-control:focus,.flat
 
 .tc-navbar-language .dropdown-menu {
   min-width: 53px
-}
+} */
 
 .tc-page-header {
   position: relative;

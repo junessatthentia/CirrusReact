@@ -1,7 +1,8 @@
 import React from 'react';
 
 import { Button } from './Button';
-import './header.css';
+import '../themes/thentia/sass/theme.sass'
+import { Thumbnail_2 } from '@carbon/icons-react';
 
 type User = {
   name: string;
@@ -45,7 +46,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
                 </svg>
               </button>
             </div>
-            <div className="col h-100 d-none d-md-block">
+            <div className="col h-100 d-md-block">
               <nav className="tc-breadcrumbs tc-breadcrumbs--light">
                 <ol className="breadcrumb">
                   <li className="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -78,7 +79,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
                 <ul className="dropdown-menu dropdown-menu-end">
                   <li><a className="dropdown-item" href="#0" >
                       <svg className="tc-icon me-2" viewBox="0 0 32 32">
-                        <path d="M30 8h-4.1c-.5-2.3-2.5-4-4.9-4s-4.4 1.7-4.9 4H2v2h14.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H30V8zM21 12c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3S22.7 12 21 12zM2 24h4.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H30v-2H15.9c-.5-2.3-2.5-4-4.9-4s-4.4 1.7-4.9 4H2V24zM11 20c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3S9.3 20 11 20z"></path>
+                          <path d="M30 8h-4.1c-.5-2.3-2.5-4-4.9-4s-4.4 1.7-4.9 4H2v2h14.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H30V8zM21 12c-1.7 0-3-1.3-3-3s1.3-3 3-3 3 1.3 3 3S22.7 12 21 12zM2 24h4.1c.5 2.3 2.5 4 4.9 4s4.4-1.7 4.9-4H30v-2H15.9c-.5-2.3-2.5-4-4.9-4s-4.4 1.7-4.9 4H2V24zM11 20c1.7 0 3 1.3 3 3s-1.3 3-3 3-3-1.3-3-3S9.3 20 11 20z"></path>
                       </svg>Settings</a></li>
                   <li><a className="dropdown-item" href="#0" >
                       <svg className="tc-icon me-2" viewBox="0 0 32 32">
@@ -478,9 +479,7 @@ export const Header = ({ user, onLogin, onLogout, onCreateAccount }: HeaderProps
                   </div>
                 </div>
                 <div className="tc-navbar__btn" data-bs-toggle="offcanvas" data-bs-target="#mode-switch-offcanvas" >
-                  <svg className="tc-icon" viewBox="0 0 32 32">
-                    <path d="M8 30H4a2 2 0 01-2-2V24a2 2 0 012-2H8a2 2 0 012 2v4A2 2 0 018 30zM4 24v4H8V24zM18 30H14a2 2 0 01-2-2V24a2 2 0 012-2h4a2 2 0 012 2v4A2 2 0 0118 30zm-4-6v4h4V24zM28 30H24a2 2 0 01-2-2V24a2 2 0 012-2h4a2 2 0 012 2v4A2 2 0 0128 30zm-4-6v4h4V24zM8 20H4a2 2 0 01-2-2V14a2 2 0 012-2H8a2 2 0 012 2v4A2 2 0 018 20zM4 14v4H8V14zM18 20H14a2 2 0 01-2-2V14a2 2 0 012-2h4a2 2 0 012 2v4A2 2 0 0118 20zm-4-6v4h4V14zM28 20H24a2 2 0 01-2-2V14a2 2 0 012-2h4a2 2 0 012 2v4A2 2 0 0128 20zm-4-6v4h4V14zM8 10H4A2 2 0 012 8V4A2 2 0 014 2H8a2 2 0 012 2V8A2 2 0 018 10zM4 4V8H8V4zM18 10H14a2 2 0 01-2-2V4a2 2 0 012-2h4a2 2 0 012 2V8A2 2 0 0118 10zM14 4V8h4V4zM28 10H24a2 2 0 01-2-2V4a2 2 0 012-2h4a2 2 0 012 2V8A2 2 0 0128 10zM24 4V8h4V4z"></path>
-                  </svg>
+                  <Thumbnail_2 className="tc-icon"/>
                 </div>
               </div>
             </div>

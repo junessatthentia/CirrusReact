@@ -1,6 +1,8 @@
 import type { Meta, StoryObj } from '@storybook/react';
 
 import { Header } from './Header';
+import React from 'react';
+import '../themes/thentia/sass/theme.sass'
 
 const meta = {
   title: 'Example/Header',
