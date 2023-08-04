@@ -144,7 +144,7 @@ body {
   background-color: #d32f3f
 }
 
-.tc-breadcrumbs {
+/* .tc-breadcrumbs {
   padding-right: 3px;
   padding-left: 3px;
   font-size: 0.875rem;
@@ -212,7 +212,7 @@ body {
 
 .tc-breadcrumbs--light .breadcrumb-item.active {
   color: #fff
-}
+} */
 
 /* .btn {
   display: inline-flex;

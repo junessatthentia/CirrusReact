@@ -4,7 +4,7 @@ import { Breadcrumb } from './Breadcrumb';
 
 // More on how to set up stories at: https://storybook.js.org/docs/react/writing-stories/introduction#default-export
 const meta = {
-  title: 'Example/Button',
+  title: 'Example/Breadcrumb',
   component: Breadcrumb,
   parameters: {
     // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/react/configure/story-layout
@@ -24,13 +24,21 @@ type Story = StoryObj<typeof meta>;
 // More on writing stories with args: https://storybook.js.org/docs/react/writing-stories/args
 export const Light: Story = {
   args: {
-    primary: true,
-    label: 'Primary',
+    links: [
+      {label:"Home", url:"/index.html"},
+      {label:"Link", url:"#0"},
+      {label:"Current Page", url:"#1"},
+    ],
+    light: true,
   },
 };
 
 export const Dark: Story = {
   args: {
-    label: 'Secondary / Outline',
+    links: [
+      {label:"Home", url:"/index.html"},
+      {label:"Link", url:"#0"},
+      {label:"Current Page", url:"#1"},
+    ],
   },
 };

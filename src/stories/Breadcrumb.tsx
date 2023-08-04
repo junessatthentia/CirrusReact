@@ -1,27 +1,27 @@
-import React from 'react';
-import '../themes/thentia/sass/theme.sass'
+import React, { ReactElement, createElement } from 'react';
+import '../themes/thentia/sass/theme.sass';
+import './breadcrumb.css';
+import { JsxElement } from 'typescript';
+import { Interface } from 'readline';
+
+type Link = {
+  label: string;
+  url: string;
+};
 
 interface BreadcrumbProps {
   /**
-   * Is this the principal call to action on the page?
+   * List the label and url of each breadcrumb
    */
-  primary?: boolean;
-    /**
-   * Does this button play a role?
+  links: Link[];
+  /**
+   * Do the breadcrumbs sit on a dark background?
    */
-  level?: 'primary' | 'success' | 'info' | 'warning' | 'danger' | 'link';
+  light?: boolean;
   /**
    * What background color to use
    */
   backgroundColor?: string;
-  /**
-   * How large should the button be?
-   */
-  size?: 'tc-btn-xs' | 'btn-sm' | 'default' | 'btn-lg';
-  /**
-   * Button contents
-   */
-  label: string;
   /**
    * Optional click handler
    */
@@ -32,23 +32,35 @@ interface BreadcrumbProps {
  * Primary UI component for user interaction
  */
 export const Breadcrumb = ({
-  primary = false,
-  size = 'default',
-  level = 'primary',
+  links = [
+    {label:"Home", url:"/index.html"},
+    {label:"Link", url:"#0"},
+    {label:"Current Page", url:"#1"},
+  ],
+  light = false,
   backgroundColor,
-  label,
   ...props
 }: BreadcrumbProps) => {
-  const mode = primary ? 'btn-' : 'btn-outline-';
-  const role = level;
+  const onLight = light ? 'tc-breadcrumbs--light' : '';
+  // const role = level;
+  let breadcrumbItems : ReactElement[] = [];
+  let itemCount = 1;
+  links.forEach((link) => {
+    if (itemCount == links.length){
+      breadcrumbItems.push(<li className="breadcrumb-item active"><a href={link.url}>{link.label}</a></li>);
+    } else {
+      breadcrumbItems.push(<li className="breadcrumb-item"><a href={link.url}>{link.label}</a></li>);
+    }
+    itemCount +=1;
+  });
+  let breadcrumbList: ReactElement = createElement("ol", {className: "breadcrumb"}, breadcrumbItems);
   return (
-    <button
-      type="button"
-      className={['btn', size, `${mode}${role}`].join(' ')}
-      style={{ backgroundColor }}
-      {...props}
-    >
-      {label}
-    </button>
+    <nav
+      className={['tc-breadcrumbs', onLight].join(' ')}
+      style={{ backgroundColor }}>
+      <ol className="breadcrumb">
+        {breadcrumbList}
+      </ol>
+    </nav>
   );
 };
